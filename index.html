@@ -17,7 +17,90 @@
 </head>
 <body>
 
-  <!-- Sections inserted by build tasks -->
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="#top" aria-label="Best Solutions Skill หน้าแรก">
+        <img src="assets/logo.png" alt="" width="40" height="40">
+        <span>Best Solutions<span class="g-text">.skill</span></span>
+      </a>
+      <nav class="navmenu" id="navmenu" aria-label="เมนูหลัก">
+        <a href="#workflow">Workflow</a>
+        <a href="#curriculum">หลักสูตร</a>
+        <a href="#pricing">ราคา</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary navmenu-cta" href="#pricing">สมัครเรียน</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="navmenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy js-reveal">
+        <span class="pill"><span class="dot"></span> คอร์สสอนสด · รับจำนวนจำกัด</span>
+        <h1>สร้างเว็บไซต์ <span class="g-text">Custom Code</span><br>ด้วย AI</h1>
+        <p class="hero-sub">เรียนตั้งแต่วางโครง ดีไซน์ ทำ HTML Preview ขึ้น Next.js เชื่อม Supabase จน Deploy เว็บออนไลน์จริง</p>
+        <ul class="check-list hero-bullets">
+          <li><span class="ck">✓</span> ใช้ AI ช่วยวางโครง ออกแบบ และเขียนโค้ดเว็บไซต์</li>
+          <li><span class="ck">✓</span> เริ่มจากทำ HTML Preview ก่อนขึ้น Next.js จริง</li>
+          <li><span class="ck">✓</span> เชื่อมฐานข้อมูล Supabase และ Deploy ด้วย Vercel</li>
+          <li><span class="ck">✓</span> สอนโดยคนทำ Digital Agency จริง ประสบการณ์ 8+ ปี</li>
+        </ul>
+        <div class="hero-price">
+          <span class="eyebrow">Early Bird</span>
+          <span class="hero-price-now g-text">1,990.-</span>
+          <span class="hero-price-was">2,590.-</span>
+          <span class="pill">รับจำนวนจำกัด</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-block-sm" href="#pricing">สมัคร Early Bird →</a>
+          <a class="btn btn-outline btn-block-sm" href="#pricing">สอบถามคอร์สเดี่ยว 1:1 ทาง LINE</a>
+        </div>
+      </div>
+
+      <div class="hero-visual js-reveal">
+        <figure class="heroimg">
+          <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1000&q=80&auto=format&fit=crop"
+               alt="บรรยากาศการทำเว็บไซต์ด้วย AI" width="1000" height="850" loading="eager">
+          <figcaption class="img-note">ภาพตัวอย่าง — แทนด้วยรูปจริงภายหลัง</figcaption>
+        </figure>
+        <div class="float float-tl"><b class="g-text">▲ Deployed</b> · Vercel · Live</div>
+        <div class="float float-br"><b>6 คลาสสด</b><br><span class="text-dim">สไลด์ · การบ้าน · ตรวจงาน</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <section class="trustbar">
+    <div class="container trustbar-inner">
+      <div class="stat-chip">
+        <span class="icon-tile sm"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 5.2 5.6.6-4.2 3.9 1.2 5.6L12 19.8 6.8 22l1.2-5.6L4 12.4l5.6-.6z"/></svg></span>
+        <div><b>8+ ปี</b><span>ประสบการณ์ Agency</span></div>
+      </div>
+      <div class="stat-chip">
+        <span class="icon-tile sm"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg></span>
+        <div><b>เรียนสด 6 คลาส</b><span>จับมือทำทีละขั้น</span></div>
+      </div>
+      <div class="stat-chip">
+        <span class="icon-tile sm"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z"/></svg></span>
+        <div><b>สไลด์ + Replay</b><span>ทบทวนย้อนหลังได้</span></div>
+      </div>
+      <div class="stat-chip">
+        <span class="icon-tile sm"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/></svg></span>
+        <div><b>Community</b><span>ถามตอบตลอดคอร์ส</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @@SECTIONS@@ remaining sections inserted here -->
+
+  </main>
 
   <script src="js/main.js" defer></script>
 </body>
