@@ -1,0 +1,51 @@
+/* ============================================================
+   Best Solutions Skill — Design Tokens
+   ทุกค่าของ design system อยู่ที่นี่ที่เดียว
+   (เฟส Next.js: ยกทั้งบล็อกนี้ไป globals.css ได้ตรง ๆ)
+   ============================================================ */
+:root {
+  /* ---- Color: surfaces ---- */
+  --bg:            #070a12;            /* พื้นหลังหลัก near-black navy */
+  --bg-alt:        #0d1220;            /* พื้น section สลับ */
+  --surface:       #141a2b;            /* การ์ด */
+  --surface-2:     #1b2236;            /* การ์ดซ้อน / hover / callout */
+  --border:        rgba(255,255,255,.08);
+  --border-strong: rgba(255,255,255,.15);
+
+  /* ---- Color: brand ---- */
+  --brand-from:    #f85a20;            /* ส้ม */
+  --brand-to:      #f82020;            /* แดง */
+  --brand-solid:   #f8431f;            /* สีเดี่ยว */
+  --brand-tint:    #ff8a5c;            /* accent บนพื้นมืด อ่านง่าย */
+  --gradient-brand: linear-gradient(90deg, var(--brand-from), var(--brand-to));
+  --brand-soft:    rgba(248,67,31,.10);
+  --brand-line:    rgba(248,67,31,.35);
+
+  /* ---- Color: text ---- */
+  --text:      #f5f7fa;
+  --text-dim:  #9aa3b2;
+  --text-mute: #6b7280;
+
+  /* ---- Typography ---- */
+  --font-display: 'Prompt', sans-serif;
+  --font-body:    'IBM Plex Sans Thai', 'Prompt', sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+
+  /* ---- Spacing (ฐาน 4px) ---- */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-6: 24px; --space-8: 32px; --space-12: 48px;
+  --space-16: 64px; --space-24: 96px;
+
+  /* ---- Radius ---- */
+  --r-sm: 8px; --r-md: 11px; --r-lg: 14px; --r-xl: 16px; --r-pill: 999px;
+
+  /* ---- Shadow (เงาดำนุ่มล้วน — no glow) ---- */
+  --shadow-sm: 0 6px 18px rgba(0,0,0,.40);
+  --shadow-lg: 0 24px 50px rgba(0,0,0,.50);
+
+  /* ---- Layout ---- */
+  --container:   1200px;
+  --section-py:  clamp(56px, 8vw, 96px);
+  --gutter:      clamp(20px, 5vw, 40px);
+  --nav-h:       68px;
+}
