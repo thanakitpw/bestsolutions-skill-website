@@ -26,10 +26,10 @@
   --text-dim:  #9aa3b2;
   --text-mute: #6b7280;
 
-  /* ---- Typography ---- */
-  --font-display: 'Prompt', sans-serif;
-  --font-body:    'IBM Plex Sans Thai', 'Prompt', sans-serif;
-  --font-mono:    'IBM Plex Mono', monospace;
+  /* ---- Typography (next/font variables w/ literal fallbacks) ---- */
+  --font-display: var(--font-prompt), 'Prompt', sans-serif;
+  --font-body:    var(--font-plex-thai), 'IBM Plex Sans Thai', 'Prompt', sans-serif;
+  --font-mono:    var(--font-plex-mono), 'IBM Plex Mono', monospace;
 
   /* ---- Spacing (ฐาน 4px) ---- */
   --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;

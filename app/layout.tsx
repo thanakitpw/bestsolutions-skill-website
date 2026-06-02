@@ -1,10 +1,30 @@
 import type { Metadata } from "next";
+import { Prompt, IBM_Plex_Sans_Thai, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Interactions } from "@/components/Interactions";
 
-const title = "AI Website Developer Live Class | Best Solutions Skill";
+const prompt = Prompt({
+  subsets: ["thai", "latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-prompt",
+  display: "swap",
+});
+const plexThai = IBM_Plex_Sans_Thai({
+  subsets: ["thai", "latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-plex-thai",
+  display: "swap",
+});
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-plex-mono",
+  display: "swap",
+});
+
+const title = "Vibe Code Website Bootcamp | Best Solutions Skill";
 const description =
-  "คอร์สสอนสด สร้างเว็บไซต์ Custom Code ด้วย AI ตั้งแต่ Design, Next.js, Supabase จน Deploy ออนไลน์จริง โดยทีม Best Solutions ประสบการณ์ Agency 8+ ปี";
+  "คอร์สสอนสด 2 วัน สร้างเว็บไซต์ด้วย Vibe Code และ AI ตั้งแต่ Design, Next.js, Tracking จน Deploy ออนไลน์ พร้อมต่อยอดเป็น Portfolio สมัครงาน รับงาน หรือสร้างรายได้";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bestsolutionskill.com"),
@@ -15,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     title,
     description:
-      "คอร์สสอนสด สร้างเว็บไซต์ Custom Code ด้วย AI ตั้งแต่ Design, Next.js, Supabase จน Deploy ออนไลน์จริง",
+      "คอร์สสอนสด 2 วัน สร้างเว็บไซต์ด้วย Vibe Code และ AI พร้อม Tracking, Deploy และแนวทางต่อยอดอาชีพ",
     images: ["/logo.png"],
   },
   twitter: { card: "summary_large_image" },
@@ -28,7 +48,10 @@ export default function RootLayout({
 }) {
   // `js` class gates reveal-on-scroll; <noscript> reveals everything when JS is off.
   return (
-    <html lang="th" className="js">
+    <html
+      lang="th"
+      className={`js ${prompt.variable} ${plexThai.variable} ${plexMono.variable}`}
+    >
       <body>
         <noscript>
           <style
