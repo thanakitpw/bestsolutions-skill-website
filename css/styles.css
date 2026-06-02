@@ -1,0 +1,76 @@
+/* ============================================================
+   Styles — components + per-section layout
+   อ่านลำดับ: COMPONENTS → SECTIONS (เพิ่มทีละ section)
+   ============================================================ */
+
+/* ====================== COMPONENTS ====================== */
+
+/* ---- Buttons ---- */
+.btn {
+  font-family: var(--font-display); font-weight: 600; font-size: .95rem;
+  padding: 12px 20px; border-radius: var(--r-md); border: 1px solid transparent;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  cursor: pointer; transition: filter .15s, border-color .15s, color .15s, background .15s;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--gradient-brand); color: #fff; box-shadow: var(--shadow-sm); }
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-outline { background: transparent; color: var(--text); border-color: var(--border-strong); }
+.btn-outline:hover { border-color: var(--brand-tint); color: var(--brand-tint); }
+.btn-ghost { background: var(--surface); color: var(--text-dim); }
+.btn-ghost:hover { color: var(--text); }
+@media (max-width: 640px) { .btn-block-sm { width: 100%; } }
+
+/* ---- Pill / badge ---- */
+.pill {
+  display: inline-flex; align-items: center; gap: 7px; font-size: .78rem; font-weight: 500;
+  padding: 6px 13px; border-radius: var(--r-pill);
+  background: var(--brand-soft); border: 1px solid var(--brand-line); color: var(--brand-tint);
+}
+.pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-from); }
+
+/* ---- Icon tile ---- */
+.icon-tile {
+  width: 44px; height: 44px; border-radius: var(--r-md); background: var(--gradient-brand);
+  display: grid; place-items: center; color: #fff; flex: none;
+}
+.icon-tile svg { width: 22px; height: 22px; stroke: #fff; }
+.icon-tile.sm { width: 34px; height: 34px; border-radius: var(--r-sm); }
+.icon-tile.sm svg { width: 18px; height: 18px; }
+
+/* ---- Card + grids ---- */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: var(--space-6); }
+.card-hover { transition: border-color .15s, transform .15s; }
+.card-hover:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+
+.grid { display: grid; gap: var(--space-4); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+
+/* ---- Check list ---- */
+.check-list { display: grid; gap: 10px; }
+.check-list li { display: flex; gap: 10px; align-items: flex-start; }
+.check-list .ck {
+  flex: none; width: 20px; height: 20px; border-radius: 6px; background: var(--gradient-brand);
+  display: grid; place-items: center; font-size: 11px; color: #fff; margin-top: 3px;
+}
+
+/* ---- Accordion (curriculum + FAQ shared) ---- */
+.acc-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; margin-bottom: 12px; }
+.acc-trigger {
+  width: 100%; text-align: left; color: var(--text);
+  font-family: var(--font-display); font-weight: 600; font-size: 1rem;
+  padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 14px;
+}
+.acc-trigger:hover { color: var(--brand-tint); }
+.acc-trigger .sign {
+  flex: none; font-size: 1.5rem; font-weight: 300; line-height: 1;
+  background: var(--gradient-brand); -webkit-background-clip: text; background-clip: text; color: transparent;
+  transition: transform .2s;
+}
+.acc-item[aria-expanded="true"] .acc-trigger .sign { transform: rotate(45deg); }
+.acc-panel { max-height: 0; overflow: hidden; transition: max-height .28s ease; }
+.acc-panel-inner { padding: 0 20px 20px; color: var(--text-dim); }
