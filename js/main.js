@@ -4,7 +4,30 @@
 document.addEventListener('DOMContentLoaded', function () {
   initNav();
   initAccordions();
+  initScrollFx();
 });
+
+/* Navbar style-on-scroll + reveal-on-scroll */
+function initScrollFx() {
+  var nav = document.getElementById('nav');
+  if (nav) {
+    var onScroll = function () { nav.classList.toggle('nav--scrolled', window.scrollY > 40); };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  var reveals = document.querySelectorAll('.js-reveal');
+  if (!('IntersectionObserver' in window)) {
+    reveals.forEach(function (el) { el.classList.add('in-view'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  reveals.forEach(function (el) { io.observe(el); });
+}
 
 /* Accordions — [data-accordion] group; add data-single for one-open-at-a-time */
 function initAccordions() {

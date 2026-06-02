@@ -233,3 +233,13 @@
 .footer-links a:hover { color: var(--text); }
 .footer-links .btn { color: #fff; }
 .footer-bottom { margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--border); color: var(--text-mute); font-size: .82rem; }
+
+/* ====================== RESPONSIVE REFINEMENTS ====================== */
+@media (max-width: 640px) {
+  .pricing-card { padding: var(--space-6); }
+  .float { font-size: .72rem; padding: 8px 10px; }
+  .hero-price-now { font-size: 1.9rem; }
+  .section-head { margin-bottom: var(--space-8); }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .footer-links { gap: var(--space-4); }
+}

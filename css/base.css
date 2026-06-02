@@ -44,11 +44,13 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; font-weigh
 }
 .text-dim { color: var(--text-dim); }
 
-/* ---- Reveal on scroll (เปิดด้วย .js-reveal, แสดงเมื่อ .in-view) ---- */
-.js-reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
-.js-reveal.in-view { opacity: 1; transform: none; }
+/* ---- Reveal on scroll ----
+   Hidden state only applies when <html class="js"> is set (by the inline
+   head script), so content is never hidden if JS/CSS support is missing. */
+.js .js-reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+.js .js-reveal.in-view { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .js-reveal { opacity: 1 !important; transform: none !important; transition: none; }
+  .js .js-reveal { opacity: 1; transform: none; transition: none; }
 }
