@@ -20,3 +20,4 @@ build/
 
 # Brainstorm visual companion
 .superpowers/
+.vercel
