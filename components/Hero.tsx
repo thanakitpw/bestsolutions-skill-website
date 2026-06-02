@@ -1,8 +1,8 @@
 const bullets = [
-  "ใช้ AI ช่วยวางโครง ออกแบบ และเขียนโค้ดเว็บไซต์",
-  "เริ่มจากทำ HTML Preview ก่อนขึ้น Next.js จริง",
-  "เชื่อมฐานข้อมูล Supabase และ Deploy ด้วย Vercel",
-  "สอนโดยคนทำ Digital Agency จริง ประสบการณ์ 8+ ปี",
+  "เรียนสด 2 วัน รวม 10 ชั่วโมง แบบเข้มข้น",
+  "ใช้ AI ช่วยวางไอเดีย ออกแบบ เขียนโค้ด และแก้ Error",
+  "ติดตั้ง Tracking พื้นฐาน เช่น GA4, Google Tag และ Search Console",
+  "ต่อยอดเป็น Portfolio สมัครงาน รับงาน หรือสร้างรายได้",
 ];
 
 export function Hero() {
@@ -11,16 +11,16 @@ export function Hero() {
       <div className="container hero-inner">
         <div className="hero-copy js-reveal">
           <span className="pill">
-            <span className="dot" /> คอร์สสอนสด · รับจำนวนจำกัด
+            <span className="dot" /> Vibe Code Bootcamp · เรียนสด 2 วัน
           </span>
           <h1>
-            สร้างเว็บไซต์ <span className="g-text">Custom Code</span>
+            สร้างเว็บไซต์ <span className="g-text">Vibe Code</span>
             <br />
-            ด้วย AI
+            ด้วย AI ใน 2 วัน
           </h1>
           <p className="hero-sub">
-            เรียนตั้งแต่วางโครง ดีไซน์ ทำ HTML Preview ขึ้น Next.js เชื่อม Supabase จน Deploy
-            เว็บออนไลน์จริง
+            เรียนตั้งแต่วางไอเดีย ออกแบบ ทำ HTML Preview ขึ้น Next.js ติดตั้ง Tracking
+            และ Deploy เว็บออนไลน์ พร้อมแนวทางต่อยอดเป็นอาชีพหรือรายได้เสริม
           </p>
           <ul className="check-list hero-bullets">
             {bullets.map((b, i) => (
@@ -30,17 +30,18 @@ export function Hero() {
             ))}
           </ul>
           <div className="hero-price">
-            <span className="eyebrow">Early Bird</span>
-            <span className="hero-price-now g-text">1,990.-</span>
-            <span className="hero-price-was">2,590.-</span>
-            <span className="pill">รับจำนวนจำกัด</span>
+            <span className="eyebrow">Early Bird · 10 Seats Only</span>
+            <span className="hero-price-now g-text">2,990.-</span>
+            <span className="hero-price-was">4,990.-</span>
+            <span className="pill">รับจำกัด 10 ที่นั่ง</span>
+            <span className="pill">มา 2 คน เหลือคนละ 2,590.-</span>
           </div>
           <div className="cta-row">
             <a className="btn btn-primary btn-block-sm" href="#pricing">
-              สมัคร Early Bird →
+              สมัคร Vibe Code Bootcamp →
             </a>
             <a className="btn btn-outline btn-block-sm" href="#pricing">
-              สอบถามคอร์สเดี่ยว 1:1 ทาง LINE
+              ดูราคา Private / On-site
             </a>
           </div>
         </div>
@@ -49,20 +50,21 @@ export function Hero() {
           <figure className="heroimg">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1000&q=80&auto=format&fit=crop"
-              alt="บรรยากาศการทำเว็บไซต์ด้วย AI"
+              src="/hero-vibe-code.png"
+              alt="คนกำลังเขียนโค้ดเว็บไซต์บนแล็ปท็อปด้วย AI"
               width={1000}
               height={850}
             />
-            <figcaption className="img-note">ภาพตัวอย่าง — แทนด้วยรูปจริงภายหลัง</figcaption>
           </figure>
           <div className="float float-tl">
-            <b className="g-text">▲ Deployed</b> · Vercel · Live
+            <b className="g-text">สอนตั้งแต่พื้นฐาน</b>
+            <br />
+            <span className="text-dim">ครบ จบ ในที่เดียว</span>
           </div>
           <div className="float float-br">
-            <b>6 คลาสสด</b>
+            <b>2 วัน · 10 ชั่วโมง</b>
             <br />
-            <span className="text-dim">สไลด์ · การบ้าน · ตรวจงาน</span>
+            <span className="text-dim">เว็บจริง · Tracking · Consult</span>
           </div>
         </div>
       </div>

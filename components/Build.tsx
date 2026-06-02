@@ -3,17 +3,18 @@ const examples = [
   "Landing Page ขายบริการ",
   "Portfolio Website",
   "เว็บรับ Lead + ฟอร์มติดต่อ",
-  "เว็บคอร์ส / โปรไฟล์ส่วนตัว",
-  "เว็บเชื่อมฐานข้อมูล Supabase",
+  "เว็บสมัครงาน / Personal Brand",
+  "เว็บที่ติด Tracking วัดผลได้",
 ];
 
 const outcomes = [
   "โครงสร้างเว็บไซต์ของตัวเอง",
   "Design Preview ก่อนขึ้นงานจริง",
   "โปรเจกต์ Next.js ที่เป็นเว็บจริง",
-  "ฟอร์ม / ระบบจัดเก็บข้อมูลผ่าน Supabase",
+  "ฟอร์ม / ระบบรับ Lead เบื้องต้น",
   "เว็บไซต์ที่ Deploy ขึ้นออนไลน์ได้",
-  "เข้าใจ Workflow การใช้ AI ทำเว็บแบบมืออาชีพ",
+  "Tracking พื้นฐานเพื่อดู Traffic และ Conversion",
+  "แนวทางต่อยอดเป็น Portfolio สมัครงาน รับงาน หรือสร้างรายได้",
 ];
 
 export function Build() {
@@ -27,7 +28,7 @@ export function Build() {
           </h2>
           <p>
             เลือกโปรเจกต์ของตัวเอง แล้วทำตามทีละขั้นจนจบ โดยใช้ AI ช่วยวางโครง ออกแบบ เขียนโค้ด
-            แก้ Error และปรับให้พร้อมใช้งานจริง
+            แก้ Error ติดตั้ง Tracking และปรับให้พร้อมใช้งานจริง
           </p>
         </div>
         <div className="grid grid-2 build-grid js-reveal">

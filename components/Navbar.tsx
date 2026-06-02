@@ -13,7 +13,7 @@ export function Navbar() {
           <a href="#workflow">Workflow</a>
           <a href="#curriculum">หลักสูตร</a>
           <a href="#pricing">ราคา</a>
-          <a href="#faq">FAQ</a>
+          <a href="#faq">คำถามที่พบบ่อย</a>
           <a className="btn btn-primary navmenu-cta" href="#pricing">สมัครเรียน</a>
         </nav>
         <button

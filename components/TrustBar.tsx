@@ -1,10 +1,10 @@
 import { Star, Video, Play, Chat } from "@/components/icons";
 
 const stats = [
-  { Icon: Star, big: "8+ ปี", sub: "ประสบการณ์ Agency" },
-  { Icon: Video, big: "เรียนสด 6 คลาส", sub: "จับมือทำทีละขั้น" },
-  { Icon: Play, big: "สไลด์ + Replay", sub: "ทบทวนย้อนหลังได้" },
-  { Icon: Chat, big: "Community", sub: "ถามตอบตลอดคอร์ส" },
+  { Icon: Star, big: "สอนแบบจับมือทำ", sub: "ทำตามได้ทีละขั้น" },
+  { Icon: Video, big: "2 วัน · 10 ชั่วโมง", sub: "เรียนสดแบบเข้มข้น" },
+  { Icon: Play, big: "Deploy + Tracking", sub: "ทำเว็บให้วัดผลได้" },
+  { Icon: Chat, big: "Consult + Community", sub: "ถามต่อหลังเรียนจบ" },
 ];
 
 export function TrustBar() {

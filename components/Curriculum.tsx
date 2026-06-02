@@ -2,6 +2,7 @@ type ClassItem = {
   id: string;
   n: string;
   name: string;
+  time: string;
   items: string[];
   hwLabel: string;
   hw: string;
@@ -10,95 +11,66 @@ type ClassItem = {
 
 const classes: ClassItem[] = [
   {
-    id: "cls1",
-    n: "Class 01",
-    name: "พื้นฐานการทำเว็บไซต์ด้วย AI",
+    id: "day1m1",
+    n: "Day 01 · ช่วงเช้า",
+    name: "Vibe Code Foundation",
+    time: "10:00-12:00",
     open: true,
     items: [
-      "เว็บ Custom Code คืออะไร และต่างจาก WordPress / No-code อย่างไร",
-      "Next.js คืออะไร เหมาะกับงานแบบไหน",
-      "Supabase คืออะไร ช่วยอะไรในเว็บไซต์",
-      "AI Coding ใช้ทำอะไรได้บ้าง",
-      "Workflow การทำเว็บจริงแบบ Agency",
-      "เครื่องมือที่ต้องเตรียมก่อนเริ่มเรียน + วิธีวาง Project Brief",
+      "Vibe Code คืออะไร และใช้ AI ช่วยทำเว็บได้อย่างไร",
+      "Workflow การทำเว็บไซต์ยุค AI ตั้งแต่ Brief จน Deploy",
+      "เลือกประเภทเว็บที่จะทำ: Landing Page, Portfolio, เว็บธุรกิจ หรือเว็บรับ Lead",
+      "วางเป้าหมายเว็บ กลุ่มเป้าหมาย จุดขาย และ CTA",
+      "เขียน Project Brief ให้ AI เข้าใจโจทย์และบริบทของเว็บ",
     ],
-    hwLabel: "การบ้าน:",
-    hw: "เลือกโปรเจกต์เว็บไซต์ที่อยากทำ และเขียน Project Brief เบื้องต้น",
+    hwLabel: "Workshop:",
+    hw: "เลือกโปรเจกต์เว็บไซต์ของตัวเอง และเขียน Project Brief พร้อมเป้าหมายเว็บ",
   },
   {
-    id: "cls2",
-    n: "Class 02",
-    name: "วางโครงเว็บไซต์และพื้นฐาน Design",
+    id: "day1m2",
+    n: "Day 01 · ช่วงบ่าย",
+    name: "Website Design & HTML Preview",
+    time: "13:00-16:00",
     items: [
-      "วาง Sitemap และ User Flow",
-      "กำหนดหน้าและ Section ที่เว็บไซต์ควรมี",
-      "พื้นฐาน Layout, Spacing, Typography, Color และ Visual Hierarchy",
-      "Responsive Design เบื้องต้น",
-      "การวาง CTA ให้คนกดติดต่อ + เลือก Reference และ Moodboard",
-      "ใช้ AI ช่วยวิเคราะห์และวางโครงหน้าเว็บ",
+      "วาง Sitemap, Section, User Flow และตำแหน่ง CTA",
+      "พื้นฐาน UX/UI ที่จำเป็น: Layout, Typography, Color, Spacing และ Responsive",
+      "ใช้ AI ช่วยสร้าง Wireframe และแนวทางหน้าตาเว็บไซต์",
+      "Prompt ให้ AI สร้าง HTML Preview",
+      "ปรับหน้าเว็บให้ดูน่าเชื่อถือและพร้อมขึ้นงานจริง",
     ],
-    hwLabel: "การบ้าน:",
-    hw: "ส่งโครงหน้าเว็บ พร้อม Section และ Reference Design ที่ต้องการ",
+    hwLabel: "Workshop:",
+    hw: "สร้าง HTML Preview หรือหน้าเว็บต้นแบบของโปรเจกต์ตัวเอง",
   },
   {
-    id: "cls3",
-    n: "Class 03",
-    name: "ทำ HTML Design Preview ด้วย AI",
+    id: "day2m1",
+    n: "Day 02 · ช่วงเช้า",
+    name: "Build Website with Next.js",
+    time: "10:00-12:00",
     items: [
-      "วิธี Prompt ให้ AI สร้างหน้าเว็บ HTML",
-      "ใช้ HTML / CSS / Tailwind เบื้องต้นสำหรับ Preview",
-      "ทำ Hero Section ให้ดูน่าสนใจ + จัด Section ให้ดูมืออาชีพ",
-      "ปรับสี Font และ Spacing",
-      "ทำ Responsive เบื้องต้น + ใช้ AI ช่วยแก้และปรับ Design",
-      "วิธีตรวจ Design ก่อนขึ้น Next.js จริง",
-    ],
-    hwLabel: "การบ้าน:",
-    hw: "ส่ง HTML Preview หน้าแรกของเว็บไซต์",
-  },
-  {
-    id: "cls4",
-    n: "Class 04",
-    name: "ขึ้นโปรเจกต์ Next.js จริง",
-    items: [
-      "สร้างโปรเจกต์ Next.js + เข้าใจโครงสร้าง Folder เบื้องต้น",
-      "เข้าใจ App Router เบื้องต้น",
+      "เข้าใจโครงสร้างโปรเจกต์ Next.js เบื้องต้น",
       "แปลง HTML Preview เป็น Component",
-      "แยก Header, Hero, Section, Footer + จัด Layout ด้วย Component",
-      "ใช้ AI ช่วย Refactor และแก้โค้ด",
+      "แก้ข้อความ รูป สี และ Section ด้วย AI",
       "วิธีอ่าน Error และให้ AI ช่วย Debug",
+      "เตรียมเว็บไซต์ให้พร้อม Deploy",
     ],
-    hwLabel: "การบ้าน:",
-    hw: "ส่งลิงก์ GitHub หรือ Screenshot เว็บไซต์ที่รันด้วย Next.js",
+    hwLabel: "Workshop:",
+    hw: "ขึ้นโปรเจกต์ Next.js เบื้องต้นจากหน้าเว็บที่ออกแบบไว้",
   },
   {
-    id: "cls5",
-    n: "Class 05",
-    name: "เชื่อม Supabase และทำระบบรับข้อมูล",
+    id: "day2m2",
+    n: "Day 02 · ช่วงบ่าย",
+    name: "Tracking, Deploy & Career Roadmap",
+    time: "13:00-16:00",
     items: [
-      "สร้าง Supabase Project + สร้าง Table สำหรับจัดเก็บข้อมูล",
-      "เชื่อม Next.js กับ Supabase + ตั้งค่า Environment Variables",
-      "ทำ Contact Form หรือ Lead Form",
-      "บันทึกข้อมูลจากหน้าเว็บเข้า Supabase + อ่านข้อมูลจาก Database",
-      "พื้นฐาน Auth / Storage ตามความเหมาะสมของโปรเจกต์",
-      "ใช้ AI ช่วยเขียนและแก้โค้ดส่วน Database",
+      "ทำ Contact Form / Lead Form เบื้องต้น และแนวคิดการเชื่อม Supabase",
+      "Deploy เว็บไซต์ขึ้น Vercel",
+      "ติดตั้ง Google Analytics 4, Google Tag และ Google Search Console พื้นฐาน",
+      "รู้จัก PageSpeed Insights และการตรวจ Performance เบื้องต้น",
+      "เข้าใจ Conversion / Key Event เช่น กดปุ่ม LINE, ส่งฟอร์ม หรือคลิก CTA",
+      "ใช้เว็บเป็น Portfolio และวางแนวทางสมัครงาน รับงาน หรือต่อยอดธุรกิจ",
     ],
-    hwLabel: "การบ้าน:",
-    hw: "ทำฟอร์มที่สามารถส่งข้อมูลเข้า Supabase ได้จริง",
-  },
-  {
-    id: "cls6",
-    n: "Class 06",
-    name: "Deploy, ตรวจงาน และปรับเว็บให้พร้อมใช้งานจริง",
-    items: [
-      "Deploy เว็บไซต์ขึ้น Vercel + ตั้งค่า Environment Variables บนระบบจริง",
-      "ตรวจ Error หลัง Deploy + ตรวจ Responsive บนมือถือ",
-      "Checklist ก่อนใช้งานจริง",
-      "ใช้ AI ช่วยตรวจ UX / UI / Code",
-      "Review งานผู้เรียน",
-      "แนวทางต่อยอดเป็นผลงานหรือรับงานจริง",
-    ],
-    hwLabel: "การบ้านสุดท้าย:",
-    hw: "ส่งเว็บไซต์ Final ที่ Deploy ขึ้นออนไลน์เรียบร้อย",
+    hwLabel: "Final outcome:",
+    hw: "ส่งเว็บที่ Deploy ออนไลน์ พร้อม Checklist การวัดผลและ Roadmap การต่อยอดหลังเรียน",
   },
 ];
 
@@ -109,11 +81,11 @@ export function Curriculum() {
         <div className="section-head js-reveal">
           <span className="eyebrow">Curriculum</span>
           <h2>
-            หลักสูตรเรียนสด <span className="g-text">6 คลาส</span> แบบจับมือทำ
+            หลักสูตรเรียนสด <span className="g-text">2 วัน 4 โมดูล</span> แบบเข้มข้น
           </h2>
           <p>
-            แต่ละคลาสมีการบ้านและตรวจงาน เพื่อให้คุณได้ลงมือทำเว็บของตัวเองจริง ๆ
-            คลิกแต่ละคลาสเพื่อดูรายละเอียด
+            เรียนวันละ 5 ชั่วโมง เวลา 10:00-12:00 และ 13:00-16:00
+            ครอบคลุมตั้งแต่วางไอเดีย ทำเว็บ ติด Tracking จน Deploy และต่อยอดอาชีพ
           </p>
         </div>
         <div className="accordion curriculum js-reveal" data-accordion>
@@ -126,7 +98,7 @@ export function Curriculum() {
                   aria-controls={c.id}
                 >
                   <span className="acc-title">
-                    <span className="num">{c.n}</span>
+                    <span className="num">{c.n} · {c.time}</span>
                     <span className="acc-name">{c.name}</span>
                   </span>
                   <span className="sign" aria-hidden="true">

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Prompt, IBM_Plex_Sans_Thai, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Interactions } from "@/components/Interactions";
+import { FloatingContact } from "@/components/FloatingContact";
+import { Analytics } from "@/components/Analytics";
 
 const prompt = Prompt({
   subsets: ["thai", "latin"],
@@ -39,6 +41,10 @@ export const metadata: Metadata = {
     images: ["/logo.png"],
   },
   twitter: { card: "summary_large_image" },
+  // Google Search Console verification (set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION, or verify via Cloudflare DNS)
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export default function RootLayout({
@@ -53,6 +59,7 @@ export default function RootLayout({
       className={`js ${prompt.variable} ${plexThai.variable} ${plexMono.variable}`}
     >
       <body>
+        <Analytics />
         <noscript>
           <style
             dangerouslySetInnerHTML={{
@@ -61,6 +68,7 @@ export default function RootLayout({
           />
         </noscript>
         {children}
+        <FloatingContact />
         <Interactions />
       </body>
     </html>

@@ -8,16 +8,16 @@ export function Footer() {
             <img src="/logo.png" alt="" width={44} height={44} />
             <div>
               <b>Best Solutions Skill</b>
-              <span>รับทำเว็บไซต์ &amp; การตลาดออนไลน์ · ประสบการณ์ Agency 8+ ปี</span>
+              <span>Vibe Code Website Bootcamp · Agency Workflow · Tracking · Deploy</span>
             </div>
           </div>
           <nav className="footer-links" aria-label="เมนูส่วนท้าย">
             <a href="#workflow">Workflow</a>
             <a href="#curriculum">หลักสูตร</a>
             <a href="#pricing">ราคา</a>
-            <a href="#faq">FAQ</a>
-            <a className="btn btn-primary" href="#" data-cta="line">
-              ทัก LINE
+            <a href="#faq">คำถามที่พบบ่อย</a>
+            <a className="btn btn-primary" href="https://lin.ee/Q22m30X" target="_blank" rel="noopener noreferrer" data-cta="line">
+              ติดต่อสอบถาม
             </a>
           </nav>
         </div>

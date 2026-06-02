@@ -1,6 +1,6 @@
 # Best Solutions Skill — Website
 
-เว็บไซต์คอร์สสอนสด **AI Website Developer Live Class** ของ Best Solutions
+เว็บไซต์คอร์สสอนสด **Vibe Code Website Bootcamp** ของ Best Solutions
 **Phase 2:** Next.js (App Router) + TypeScript — ยก design system จากเฟส HTML มาเป็น component
 (เฟส HTML เดิมเก็บไว้ที่ [`html-preview/`](html-preview/) เป็น reference)
 
@@ -30,6 +30,7 @@ components/
   icons.tsx          stroke icons (shared)
 public/logo.png      โลโก้แบรนด์
 docs/                spec, plan, design-system.md
+docs/vibe-code-website-bootcamp-plan.md
 html-preview/        เฟส HTML เดิม (static — เปิดไฟล์ดูได้ตรง ๆ)
 ```
 
@@ -39,7 +40,7 @@ Design system / token reference: [`docs/design-system.md`](docs/design-system.md
 
 - 🔗 ลิงก์ LINE OA / สมัครจริง — ปุ่มที่ติด `data-cta="line"` + `href="#"`
 - 🖼️ รูป Hero (ตอนนี้ Unsplash ชั่วคราว) + รูปผู้สอน/ทีม + OG image, ตั้ง `metadataBase` เป็น domain จริง
-- 📅 วัน-เวลาเปิดเรียน, จำนวนที่นั่ง Early Bird, เงื่อนไขชำระเงิน
+- 📅 วันเปิดเรียนจริง, จำนวนที่นั่ง, เงื่อนไขชำระเงิน และรายละเอียด On-site Training
 
 ## เฟสถัดไป (Phase 3)
 

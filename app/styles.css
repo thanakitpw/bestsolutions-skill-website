@@ -144,10 +144,19 @@
 @media (max-width: 640px) { .stat-chip { flex: 1 1 42%; } }
 
 /* ====================== PROBLEM ====================== */
-.pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: var(--space-4); }
-.pain { display: flex; gap: 14px; align-items: flex-start; padding: var(--space-4) var(--space-6); }
-.pain p { font-size: .95rem; color: var(--text-dim); }
-.pain-ic { opacity: .92; }
+.pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); max-width: 940px; margin-inline: auto; }
+.pain {
+  position: relative; display: flex; gap: 14px; align-items: flex-start; overflow: hidden;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+  padding: var(--space-6); transition: border-color .15s, transform .15s, background .15s;
+}
+.pain::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--gradient-brand); opacity: 0; transition: opacity .15s; }
+.pain:hover { border-color: var(--border-strong); transform: translateY(-2px); background: var(--surface-2); }
+.pain:hover::before { opacity: 1; }
+.pain-ic { flex: none; width: 36px; height: 36px; border-radius: var(--r-md); display: grid; place-items: center; background: var(--brand-soft); border: 1px solid var(--brand-line); }
+.pain-ic svg { width: 18px; height: 18px; stroke: var(--brand-tint); }
+.pain p { font-size: .95rem; color: var(--text-dim); line-height: 1.55; }
+@media (max-width: 760px) { .pain-grid { grid-template-columns: 1fr; } }
 
 /* ====================== WORKFLOW ====================== */
 .flow { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; margin-bottom: var(--space-12); }
@@ -183,16 +192,16 @@
 
 /* ====================== INSTRUCTOR ====================== */
 .instructor-grid { align-items: center; }
-.instructor-photo { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border); aspect-ratio: 4 / 3.2; background: var(--surface-2); display: grid; place-items: center; }
-.instructor-ph-inner { display: grid; gap: 10px; justify-items: center; text-align: center; padding: var(--space-6); }
-.instructor-ph-inner svg { width: 56px; height: 56px; stroke: var(--text-mute); }
-.instructor-name { font-family: var(--font-display); font-weight: 600; color: var(--text); }
-.img-note-inline { font-family: var(--font-mono); font-size: .68rem; color: var(--text-mute); }
+.instructor-photo { position: relative; max-width: 360px; margin-inline: auto; border-radius: var(--r-lg); aspect-ratio: 1 / 1; padding: 4px; background: var(--gradient-brand); box-shadow: var(--shadow-lg); }
+.instructor-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; border-radius: calc(var(--r-lg) - 4px); background: var(--surface-2); }
+.instructor-caption { margin-top: var(--space-4); text-align: center; }
+.instructor-name { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: var(--text); }
+.instructor-role { display: block; color: var(--brand-tint); font-size: .92rem; margin-top: 2px; }
 .instructor-points { margin-bottom: var(--space-6); }
 .instructor-quote { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--brand-solid); border-radius: var(--r-md); padding: var(--space-6); color: var(--text); font-size: 1.02rem; line-height: 1.7; }
 
 /* ====================== PRICING ====================== */
-.pricing-grid { max-width: 880px; margin-inline: auto; align-items: stretch; }
+.pricing-grid { max-width: 1120px; margin-inline: auto; align-items: stretch; }
 .pricing-card { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-xl); padding: var(--space-8); }
 .pricing-card.featured { border-color: rgba(248,67,31,.5); }
 .pc-badge { position: absolute; top: -12px; right: 22px; background: var(--gradient-brand); color: #fff; font-family: var(--font-display); font-weight: 600; font-size: .75rem; padding: 4px 12px; border-radius: var(--r-pill); }
@@ -200,6 +209,7 @@
 .pc-price { display: flex; align-items: baseline; gap: 10px; margin: var(--space-3) 0; }
 .pc-now { font-family: var(--font-display); font-size: 2rem; font-weight: 700; }
 .pc-was { color: var(--text-mute); text-decoration: line-through; }
+.pc-save { color: var(--brand-tint); font-family: var(--font-display); font-size: .9rem; font-weight: 600; margin: -4px 0 var(--space-3); }
 .pc-for { color: var(--text-dim); font-size: .92rem; margin-bottom: var(--space-6); }
 .pc-list { margin-bottom: var(--space-8); }
 .pc-list li { font-size: .92rem; }
@@ -210,6 +220,26 @@
 .tool-card b { display: block; font-family: var(--font-display); font-weight: 600; font-size: .95rem; }
 .tool-card > div span { color: var(--text-dim); font-size: .8rem; }
 .icon-tile.mono { font-family: var(--font-mono); font-weight: 600; font-size: .95rem; }
+.tool-group { margin-top: var(--space-12); }
+.tool-group:first-of-type { margin-top: 0; }
+.tool-group-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-4); margin-bottom: var(--space-4); }
+.tool-group-head h3 { font-size: 1.15rem; color: var(--text); }
+.tool-card--stack { min-height: 150px; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 14px; }
+.tool-card--stack .icon-tile { width: 64px; height: 64px; border-radius: var(--r-lg); }
+.tool-card--stack .icon-tile.mono { font-size: 1rem; }
+.tool-logo { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: var(--r-md); background: #fff; border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,.25); }
+.tool-logo img { width: 58%; height: 58%; object-fit: contain; }
+.tool-card--stack .tool-logo { width: 64px; height: 64px; border-radius: var(--r-lg); }
+/* hover animation */
+.tool-card { transition: transform .18s ease, border-color .18s ease, background .18s ease; }
+.tool-card:hover { transform: translateY(-4px); border-color: var(--border-strong); background: var(--surface-2); }
+.tool-card .tool-logo { transition: transform .28s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease; }
+.tool-card:hover .tool-logo { transform: scale(1.12) rotate(-4deg); box-shadow: 0 10px 24px rgba(0,0,0,.4); }
+.tool-card:hover b { color: var(--brand-tint); }
+@media (prefers-reduced-motion: reduce) {
+  .tool-card, .tool-card .tool-logo { transition: none; }
+  .tool-card:hover, .tool-card:hover .tool-logo { transform: none; }
+}
 .note-box { margin-top: var(--space-8); background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--space-6); color: var(--text-dim); font-size: .92rem; display: flex; gap: 14px; align-items: flex-start; }
 .note-box .icon-tile { flex: none; }
 
@@ -242,4 +272,27 @@
   .section-head { margin-bottom: var(--space-8); }
   .footer-inner { flex-direction: column; align-items: flex-start; }
   .footer-links { gap: var(--space-4); }
+}
+
+/* ====================== FLOATING CONTACT (FAB) ====================== */
+.fab { position: fixed; right: 18px; bottom: 18px; z-index: 200; display: flex; flex-direction: column; gap: 12px; }
+.fab-btn { position: relative; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 26px rgba(0,0,0,.4); transition: transform .15s, filter .15s; }
+.fab-btn:hover { transform: scale(1.07); filter: brightness(1.05); }
+.fab-line { background: #06C755; }
+.fab-tel { background: var(--gradient-brand); }
+.fab-btn svg { width: 32px; height: 32px; }
+.fab-tel svg { width: 26px; height: 26px; }
+.fab-label {
+  position: absolute; right: calc(100% + 12px); top: 50%;
+  transform: translateY(-50%) translateX(6px); white-space: nowrap;
+  background: var(--surface-2); color: var(--text); border: 1px solid var(--border-strong);
+  padding: 7px 13px; border-radius: var(--r-pill); font-family: var(--font-display);
+  font-weight: 600; font-size: .85rem; opacity: 0; pointer-events: none;
+  transition: opacity .15s, transform .15s; box-shadow: var(--shadow-sm);
+}
+.fab-btn:hover .fab-label, .fab-btn:focus-visible .fab-label { opacity: 1; transform: translateY(-50%) translateX(0); }
+@media (max-width: 640px) {
+  .fab { right: 14px; bottom: 14px; gap: 10px; }
+  .fab-btn { width: 52px; height: 52px; }
+  .fab-label { display: none; }
 }
