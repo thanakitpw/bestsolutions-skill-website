@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node / Next.js (เฟสถัดไป)
+node_modules/
+.next/
+out/
+dist/
+build/
+*.log
+.env
+.env.*
+!.env.example
+
+# Brainstorm visual companion
+.superpowers/
