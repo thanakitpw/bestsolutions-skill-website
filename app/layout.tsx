@@ -7,6 +7,7 @@ const description =
   "คอร์สสอนสด สร้างเว็บไซต์ Custom Code ด้วย AI ตั้งแต่ Design, Next.js, Supabase จน Deploy ออนไลน์จริง โดยทีม Best Solutions ประสบการณ์ Agency 8+ ปี";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bestsolutionskill.com"),
   title,
   description,
   icons: { icon: "/logo.png" },
