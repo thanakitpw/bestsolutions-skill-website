@@ -141,3 +141,25 @@
 .stat-chip b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
 .stat-chip span { color: var(--text-dim); font-size: .85rem; }
 @media (max-width: 640px) { .stat-chip { flex: 1 1 42%; } }
+
+/* ====================== PROBLEM ====================== */
+.pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: var(--space-4); }
+.pain { display: flex; gap: 14px; align-items: flex-start; padding: var(--space-4) var(--space-6); }
+.pain p { font-size: .95rem; color: var(--text-dim); }
+.pain-ic { opacity: .92; }
+
+/* ====================== WORKFLOW ====================== */
+.flow { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; margin-bottom: var(--space-12); }
+.flow li { display: inline-flex; align-items: center; gap: 8px; }
+.flow li:not(:first-child)::before { content: "→"; color: var(--brand-tint); font-family: var(--font-mono); }
+.flow span { font-family: var(--font-mono); font-size: .8rem; font-weight: 500; color: var(--text); background: var(--surface); border: 1px solid var(--border); padding: 8px 14px; border-radius: var(--r-pill); white-space: nowrap; }
+.step-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.step-card .num { font-family: var(--font-mono); font-size: .9rem; font-weight: 600; background: var(--gradient-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.step-card h3 { font-size: 1.1rem; margin: 6px 0 8px; }
+.step-card p { font-size: .92rem; color: var(--text-dim); }
+
+/* ====================== WHAT YOU'LL BUILD ====================== */
+.build-grid { align-items: stretch; }
+.build-h { font-size: 1.15rem; margin-bottom: var(--space-4); }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { font-size: .85rem; padding: 7px 13px; border-radius: var(--r-pill); background: var(--surface-2); border: 1px solid var(--border); color: var(--text); }
