@@ -282,6 +282,8 @@
 .fab-tel { background: var(--gradient-brand); }
 .fab-btn svg { width: 32px; height: 32px; }
 .fab-tel svg { width: 26px; height: 26px; }
+.fab-fb { background: #1877F2; }
+.fab-fb svg { width: 24px; height: 24px; }
 .fab-label {
   position: absolute; right: calc(100% + 12px); top: 50%;
   transform: translateY(-50%) translateX(6px); white-space: nowrap;

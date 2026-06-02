@@ -28,6 +28,19 @@ export function FloatingContact() {
         </svg>
       </a>
 
+      <a
+        className="fab-btn fab-fb"
+        href="https://www.facebook.com/BestSolutionSkill/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook Best Solutions Skill"
+      >
+        <span className="fab-label">Facebook</span>
+        <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+          <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+        </svg>
+      </a>
+
       <a className="fab-btn fab-tel" href="tel:0953854906" aria-label="โทร 095-385-4906">
         <span className="fab-label">095-385-4906</span>
         <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
