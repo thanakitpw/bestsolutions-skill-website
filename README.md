@@ -1,55 +1,50 @@
-# Best Solutions Skill — Landing Page
+# Best Solutions Skill — Website
 
-Landing Page ขายคอร์สสอนสด **AI Website Developer Live Class** ของ Best Solutions
-เฟสนี้เป็น **Vanilla HTML + CSS + JS** (ไม่มี build step) พร้อมต่อยอดไป Next.js + Supabase ในเฟสถัดไป
+เว็บไซต์คอร์สสอนสด **AI Website Developer Live Class** ของ Best Solutions
+**Phase 2:** Next.js (App Router) + TypeScript — ยก design system จากเฟส HTML มาเป็น component
+(เฟส HTML เดิมเก็บไว้ที่ [`html-preview/`](html-preview/) เป็น reference)
 
-## เปิดดู
-
-ดับเบิลคลิก `index.html` ได้เลย หรือรันผ่าน local server (แนะนำ — ให้ path/ฟอนต์ทำงานครบ):
+## รัน
 
 ```bash
-python3 -m http.server 8080
-# เปิด http://localhost:8080
+npm install          # ครั้งแรก
+npm run dev          # dev server → http://localhost:3000 (Turbopack)
+npm run build        # production build
+npm start            # serve production build
 ```
 
-## โครงสร้างไฟล์
+## โครงสร้าง
 
 ```
-index.html              หน้าเดียว ทุก section (semantic HTML)
-css/
-  tokens.css            design system — สี/ฟอนต์/spacing/radius/shadow/layout
-  base.css              reset + typography + layout primitives + reveal
-  styles.css            components + layout แต่ละ section
-js/
-  main.js               nav มือถือ, accordion, navbar-on-scroll, reveal
-assets/
-  logo.png              โลโก้แบรนด์
-docs/
-  design-system.md      เอกสาร token + component
-  superpowers/          spec + implementation plan
+app/
+  layout.tsx         root layout — metadata, fonts, gate reveal (js class)
+  page.tsx           ประกอบทุก section
+  globals.css        @import fonts + tokens.css + base.css + styles.css
+  tokens.css         design system — สี/ฟอนต์/spacing/radius/shadow (ยกมาจากเฟส HTML)
+  base.css           reset + typography + layout primitives + reveal
+  styles.css         components + layout แต่ละ section
+components/
+  Navbar, Hero, TrustBar, Problem, Workflow, Build, Curriculum,
+  Bonus, Instructor, Pricing, Tools, Faq, FinalCta, Footer
+  Interactions.tsx   'use client' — nav, accordions, navbar-on-scroll, reveal (ported จาก main.js)
+  icons.tsx          stroke icons (shared)
+public/logo.png      โลโก้แบรนด์
+docs/                spec, plan, design-system.md
+html-preview/        เฟส HTML เดิม (static — เปิดไฟล์ดูได้ตรง ๆ)
 ```
 
-## Section ในหน้า
-
-Navbar · Hero · Trust bar · Problem · Solution+Workflow · What You'll Build ·
-Curriculum (6 คลาส) · Bonus · Instructor · Pricing · Tools · FAQ · Final CTA · Footer
+Design system / token reference: [`docs/design-system.md`](docs/design-system.md)
 
 ## สิ่งที่ต้องเติมก่อนใช้งานจริง (TODO)
 
-- 🔗 ลิงก์ LINE OA / ช่องทางสมัครจริง — ปุ่มที่ติด `data-cta="line"` และ `href="#"` ทั้งหมด
-- 🖼️ รูป Hero (ตอนนี้ดึงจาก Unsplash ชั่วคราว) + รูปผู้สอน/ทีม + OG image (1200×630)
-- 📅 วัน-เวลาเปิดเรียน, จำนวนที่นั่ง Early Bird
-- 💳 เงื่อนไขชำระเงิน/คืนเงิน, ระยะเวลา Replay/Community
+- 🔗 ลิงก์ LINE OA / สมัครจริง — ปุ่มที่ติด `data-cta="line"` + `href="#"`
+- 🖼️ รูป Hero (ตอนนี้ Unsplash ชั่วคราว) + รูปผู้สอน/ทีม + OG image, ตั้ง `metadataBase` เป็น domain จริง
+- 📅 วัน-เวลาเปิดเรียน, จำนวนที่นั่ง Early Bird, เงื่อนไขชำระเงิน
 
-## เฟสถัดไป (วางแผนไว้แล้ว)
+## เฟสถัดไป (Phase 3)
 
-ดูรายละเอียดใน `docs/superpowers/specs/2026-06-02-best-solutions-skill-landing-design.md`
+ดู [`docs/superpowers/specs/2026-06-02-best-solutions-skill-landing-design.md`](docs/superpowers/specs/2026-06-02-best-solutions-skill-landing-design.md)
 
-- **เฟส 2 — Next.js (App Router):** ยกแต่ละ section เป็น component (`HeroSection`, `CurriculumSection`, …)
-  ย้าย `css/tokens.css` → `globals.css` (token เป็น CSS variables พอร์ตได้ตรง)
-- **เฟส 3 — Database:** Supabase ตาราง `articles` (บล็อก) + `leads` (ฟอร์มสมัคร), หน้า `/blog`, Deploy บน Vercel
-
-## Design System
-
-โทน dark + flat (ไม่มี glow) + brand gradient ส้ม→แดง (`#f85a20 → #f82020`)
-รายละเอียด token และ component ดูที่ [`docs/design-system.md`](docs/design-system.md)
+- **Database (บล็อก/บทความ):** Supabase ตาราง `articles` + หน้า `/blog`, `/blog/[slug]`
+- **Lead form:** ตาราง `leads` รับข้อมูลจากปุ่มสมัคร
+- **Deploy:** Vercel (เชื่อม env + custom domain)
