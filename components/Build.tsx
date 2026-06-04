@@ -11,6 +11,7 @@ const outcomes = [
   "โครงสร้างเว็บไซต์ของตัวเอง",
   "Design Preview ก่อนขึ้นงานจริง",
   "โปรเจกต์ Next.js ที่เป็นเว็บจริง",
+  "โค้ดบน GitHub ที่จัดการด้วย Git เป็น (commit / push)",
   "ฟอร์ม / ระบบรับ Lead เบื้องต้น",
   "เว็บไซต์ที่ Deploy ขึ้นออนไลน์ได้",
   "Tracking พื้นฐานเพื่อดู Traffic และ Conversion",

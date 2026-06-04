@@ -11,6 +11,7 @@ export function Navbar() {
         </a>
         <nav className="navmenu" id="navmenu" aria-label="เมนูหลัก">
           <a href="#workflow">Workflow</a>
+          <a href="#portfolio">ผลงาน</a>
           <a href="#curriculum">หลักสูตร</a>
           <a href="#pricing">ราคา</a>
           <a href="#faq">คำถามที่พบบ่อย</a>

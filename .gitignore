@@ -21,3 +21,9 @@ build/
 # Brainstorm visual companion
 .superpowers/
 .vercel
+
+# build info
+tsconfig.tsbuildinfo
+
+# local source mockups (originals)
+/portfolio/

@@ -4,6 +4,7 @@ import { TrustBar } from "@/components/TrustBar";
 import { Problem } from "@/components/Problem";
 import { Workflow } from "@/components/Workflow";
 import { Build } from "@/components/Build";
+import { Portfolio } from "@/components/Portfolio";
 import { Curriculum } from "@/components/Curriculum";
 import { Bonus } from "@/components/Bonus";
 import { Instructor } from "@/components/Instructor";
@@ -23,6 +24,7 @@ export default function Home() {
         <Problem />
         <Workflow />
         <Build />
+        <Portfolio />
         <Curriculum />
         <Bonus />
         <Instructor />

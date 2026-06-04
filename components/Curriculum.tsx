@@ -50,6 +50,7 @@ const classes: ClassItem[] = [
       "เข้าใจโครงสร้างโปรเจกต์ Next.js เบื้องต้น",
       "แปลง HTML Preview เป็น Component",
       "แก้ข้อความ รูป สี และ Section ด้วย AI",
+      "พื้นฐาน Git: commit, push และเก็บโค้ดขึ้น GitHub Repository",
       "วิธีอ่าน Error และให้ AI ช่วย Debug",
       "เตรียมเว็บไซต์ให้พร้อม Deploy",
     ],
@@ -63,6 +64,7 @@ const classes: ClassItem[] = [
     time: "13:00-16:00",
     items: [
       "ทำ Contact Form / Lead Form เบื้องต้น และแนวคิดการเชื่อม Supabase",
+      "เชื่อม GitHub กับ Vercel เพื่อ Deploy อัตโนมัติทุกครั้งที่ push โค้ด",
       "Deploy เว็บไซต์ขึ้น Vercel",
       "ติดตั้ง Google Analytics 4, Google Tag และ Google Search Console พื้นฐาน",
       "รู้จัก PageSpeed Insights และการตรวจ Performance เบื้องต้น",
