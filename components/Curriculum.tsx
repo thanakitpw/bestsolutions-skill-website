@@ -12,7 +12,7 @@ type ClassItem = {
 const classes: ClassItem[] = [
   {
     id: "day1m1",
-    n: "Day 01 · ช่วงเช้า",
+    n: "เสาร์ 27 มิ.ย. · ช่วงเช้า",
     name: "Vibe Code Foundation",
     time: "10:00-12:00",
     open: true,
@@ -28,7 +28,7 @@ const classes: ClassItem[] = [
   },
   {
     id: "day1m2",
-    n: "Day 01 · ช่วงบ่าย",
+    n: "เสาร์ 27 มิ.ย. · ช่วงบ่าย",
     name: "Website Design & HTML Preview",
     time: "13:00-16:00",
     items: [
@@ -43,7 +43,7 @@ const classes: ClassItem[] = [
   },
   {
     id: "day2m1",
-    n: "Day 02 · ช่วงเช้า",
+    n: "อาทิตย์ 28 มิ.ย. · ช่วงเช้า",
     name: "Build Website with Next.js",
     time: "10:00-12:00",
     items: [
@@ -58,7 +58,7 @@ const classes: ClassItem[] = [
   },
   {
     id: "day2m2",
-    n: "Day 02 · ช่วงบ่าย",
+    n: "อาทิตย์ 28 มิ.ย. · ช่วงบ่าย",
     name: "Tracking, Deploy & Career Roadmap",
     time: "13:00-16:00",
     items: [
