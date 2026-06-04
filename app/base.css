@@ -4,7 +4,9 @@
 
 /* ---- Reset ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+/* JS (Interactions.tsx) handles eased anchor scrolling; keep CSS auto so per-frame
+   scrollTo isn't double-smoothed. Falls back to instant jump if JS is disabled. */
+html { scroll-behavior: auto; -webkit-text-size-adjust: 100%; }
 body {
   background: var(--bg);
   color: var(--text);

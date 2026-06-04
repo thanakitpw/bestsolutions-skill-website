@@ -74,6 +74,44 @@ export function Interactions() {
     window.addEventListener("resize", onResize);
     cleanups.push(() => window.removeEventListener("resize", onResize));
 
+    // ---- Smooth scroll for in-page anchors (custom easing + nav offset) ----
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const navEl = document.getElementById("nav");
+    const easeInOutCubic = (t: number) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    const onAnchorClick = (ev: Event) => {
+      const link = (ev.target as HTMLElement).closest('a[href^="#"]') as HTMLAnchorElement | null;
+      if (!link) return;
+      const hash = link.getAttribute("href") || "";
+      if (hash === "#" || hash.length < 2) return;
+      const target = document.getElementById(hash.slice(1));
+      if (!target) return;
+
+      ev.preventDefault();
+      const navH = navEl ? navEl.offsetHeight : 0;
+      const destY = target.getBoundingClientRect().top + window.scrollY - navH - 12;
+      history.pushState(null, "", hash);
+
+      if (prefersReduced) {
+        window.scrollTo(0, destY);
+        return;
+      }
+      const startY = window.scrollY;
+      const dist = destY - startY;
+      const duration = Math.min(900, Math.max(450, Math.abs(dist) * 0.5));
+      let startTime = 0;
+      const step = (now: number) => {
+        if (!startTime) startTime = now;
+        const p = Math.min(1, (now - startTime) / duration);
+        window.scrollTo(0, startY + dist * easeInOutCubic(p));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    document.addEventListener("click", onAnchorClick);
+    cleanups.push(() => document.removeEventListener("click", onAnchorClick));
+
     // ---- Navbar style-on-scroll ----
     const nav = document.getElementById("nav");
     if (nav) {
