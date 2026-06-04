@@ -42,6 +42,7 @@ export function Pricing() {
             <span className="pc-badge">แนะนำ</span>
             <span className="eyebrow">Group Class</span>
             <h3 className="pc-title">Vibe Code Bootcamp</h3>
+            <p className="pc-date">📅 รอบสอน เสาร์–อาทิตย์ ที่ 27–28 มิถุนายน 2026</p>
             <div className="pc-price">
               <span className="pc-now g-text">2,990.-</span>
               <span className="pc-was">4,990.-</span>

@@ -13,6 +13,9 @@ export function Hero() {
           <span className="pill">
             <span className="dot" /> Vibe Code Bootcamp · เรียนสด 2 วัน
           </span>
+          <span className="hero-schedule">
+            📅 รอบสอน เสาร์–อาทิตย์ ที่ <b>27–28 มิถุนายน 2026</b>
+          </span>
           <h1>
             สร้างเว็บไซต์ <span className="g-text">Vibe Code</span>
             <br />
@@ -62,9 +65,9 @@ export function Hero() {
             <span className="text-dim">ครบ จบ ในที่เดียว</span>
           </div>
           <div className="float float-br">
-            <b>2 วัน · 10 ชั่วโมง</b>
+            <b>27–28 มิ.ย. 2026</b>
             <br />
-            <span className="text-dim">เว็บจริง · Tracking · Consult</span>
+            <span className="text-dim">เสาร์–อาทิตย์ · 2 วัน 10 ชม.</span>
           </div>
         </div>
       </div>
