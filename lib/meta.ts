@@ -41,11 +41,22 @@ export async function sendPurchaseEvent(args: {
     ],
   };
 
-  const res = await fetch(
-    `https://graph.facebook.com/${GRAPH_VERSION}/${pixelId}/events?access_token=${token}`,
-    { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }
-  );
-  if (!res.ok) {
-    console.error("Meta CAPI error", res.status, await res.text());
+  try {
+    const res = await fetch(
+      `https://graph.facebook.com/${GRAPH_VERSION}/${pixelId}/events`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(body),
+      }
+    );
+    if (!res.ok) {
+      console.error("Meta CAPI error", res.status, await res.text());
+    }
+  } catch (err) {
+    console.error("Meta CAPI network error", err);
   }
 }
