@@ -40,7 +40,7 @@ export function Hero() {
             <span className="pill">มา 2 คน เหลือคนละ 2,590.-</span>
           </div>
           <div className="cta-row">
-            <a className="btn btn-primary btn-block-sm" href="#pricing">
+            <a className="btn btn-primary btn-block-sm" href="/checkout?plan=early-bird">
               สมัคร Vibe Code Bootcamp →
             </a>
             <a className="btn btn-outline btn-block-sm" href="#pricing">

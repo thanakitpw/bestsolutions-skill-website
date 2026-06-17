@@ -58,7 +58,7 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <a className="btn btn-primary" href="https://lin.ee/Q22m30X" target="_blank" rel="noopener noreferrer" data-cta="line">
+            <a className="btn btn-primary" href="/checkout?plan=group">
               สมัคร Group Class
             </a>
           </article>
@@ -80,8 +80,8 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <a className="btn btn-outline" href="https://lin.ee/Q22m30X" target="_blank" rel="noopener noreferrer" data-cta="line">
-              สอบถาม Private Class
+            <a className="btn btn-outline" href="/checkout?plan=private">
+              สมัคร Private Class
             </a>
           </article>
 

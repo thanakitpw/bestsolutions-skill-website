@@ -9,7 +9,7 @@ export function FinalCta() {
           มี Replay, Prompt Pack, Community และ Consult หลังเรียนจบให้คุณต่อยอดได้ต่อ
         </p>
         <div className="cta-row cta-center">
-          <a className="btn btn-primary" href="#pricing">
+          <a className="btn btn-primary" href="/checkout?plan=early-bird">
             สมัคร Early Bird 2,990.-
           </a>
           <a className="btn btn-outline" href="https://lin.ee/Q22m30X" target="_blank" rel="noopener noreferrer" data-cta="line">
