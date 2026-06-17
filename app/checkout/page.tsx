@@ -1,4 +1,6 @@
 import { redirect } from "next/navigation";
+
+export const metadata = { title: "ชำระเงิน | Best Solutions Skill" };
 import { getPlan, type PlanId } from "@/lib/plans";
 import { CheckoutForm } from "@/components/CheckoutForm";
 import { SiteNavbar } from "@/components/SiteNavbar";

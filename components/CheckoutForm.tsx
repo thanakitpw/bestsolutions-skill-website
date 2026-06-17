@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { EmbeddedCheckoutProvider, EmbeddedCheckout } from "@stripe/react-stripe-js";
 import { PLANS, type PlanId } from "@/lib/plans";
@@ -16,16 +16,27 @@ export function CheckoutForm({ plan }: { plan: PlanId }) {
   const [started, setStarted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const buyerRef = useRef({ name, email, phone, quantity });
+  if (!started) buyerRef.current = { name, email, phone, quantity };
+
   const fetchClientSecret = useCallback(async () => {
+    const b = buyerRef.current;
     const res = await fetch("/api/checkout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ plan, quantity, name, email, phone }),
+      body: JSON.stringify({ plan, quantity: b.quantity, name: b.name, email: b.email, phone: b.phone }),
     });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error ?? "checkout failed");
-    return data.clientSecret as string;
-  }, [plan, quantity, name, email, phone]);
+    const text = await res.text();
+    let data: { clientSecret?: string; error?: string } = {};
+    try {
+      data = text ? JSON.parse(text) : {};
+    } catch {
+      throw new Error(`HTTP ${res.status}`);
+    }
+    if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
+    if (!data.clientSecret) throw new Error("no client secret");
+    return data.clientSecret;
+  }, [plan]);
 
   function start() {
     setError(null);
