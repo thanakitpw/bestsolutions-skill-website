@@ -316,3 +316,21 @@
   .fab-btn { width: 52px; height: 52px; }
   .fab-label { display: none; }
 }
+
+/* ====================== HOME (hub) ====================== */
+.home-hero { max-width: 760px; margin-inline: auto; text-align: center; }
+.home-hero .pill { margin-bottom: var(--space-4); }
+.home-hero-sub { margin-inline: auto; }
+
+.course-card { display: flex; flex-direction: column; gap: var(--space-3); color: var(--text); }
+.course-card-title { font-size: 1.15rem; }
+.course-card-list { margin-top: var(--space-2); }
+.course-card-list li { font-size: .92rem; }
+.course-card-foot { display: flex; align-items: center; justify-content: space-between; margin-top: var(--space-2); }
+.course-card-price b { font-family: var(--font-display); font-size: 1.3rem; }
+.course-card-cta { color: var(--brand-tint); font-weight: 600; font-size: .92rem; }
+.course-card-date { font-size: .85rem; }
+
+.coming-soon { text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+.coming-soon-emoji { font-size: 2rem; }
+.coming-soon p { color: var(--text-dim); }
