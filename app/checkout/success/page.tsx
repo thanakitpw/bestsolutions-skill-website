@@ -21,14 +21,17 @@ export default async function SuccessPage({
 
   const order = await getOrderBySessionId(session_id);
 
+  const eventId = order?.eventId ?? session.metadata?.event_id;
+  const amountBaht = (order?.amountTotal ?? session.amount_total ?? 0) / 100;
+
   return (
     <>
       <SiteNavbar />
       <main className="container checkout-page">
-        {order && (
+        {eventId && (
           <PixelPurchase
-            eventId={order.eventId}
-            value={order.amountTotal / 100}
+            eventId={eventId}
+            value={amountBaht}
             currency="THB"
           />
         )}
@@ -37,7 +40,7 @@ export default async function SuccessPage({
           <p>เราได้รับการชำระเงินเรียบร้อยแล้ว</p>
           {order && (
             <p className="text-dim">
-              {order.plan} ×{order.quantity} — {(order.amountTotal / 100).toLocaleString("th-TH")} บาท
+              {order.plan} ×{order.quantity} — {amountBaht.toLocaleString("th-TH")} บาท
             </p>
           )}
           <p>ทีมงานจะติดต่อกลับทาง LINE เพื่อยืนยันรายละเอียดและส่งลิงก์เข้ากลุ่มเรียน</p>
