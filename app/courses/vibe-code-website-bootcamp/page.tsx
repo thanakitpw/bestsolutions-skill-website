@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Navbar } from "@/components/Navbar";
+import { SiteNavbar } from "@/components/SiteNavbar";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
 import { Problem } from "@/components/Problem";
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function VibeCodeBootcampPage() {
   return (
     <>
-      <Navbar />
+      <SiteNavbar />
       <main id="top">
         <Hero />
         <TrustBar />
