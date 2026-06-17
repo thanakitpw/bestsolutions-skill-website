@@ -4,6 +4,7 @@ import "./globals.css";
 import { Interactions } from "@/components/Interactions";
 import { FloatingContact } from "@/components/FloatingContact";
 import { Analytics } from "@/components/Analytics";
+import { MetaPixel } from "@/components/MetaPixel";
 
 const prompt = Prompt({
   subsets: ["thai", "latin"],
@@ -60,6 +61,7 @@ export default function RootLayout({
     >
       <body>
         <Analytics />
+        <MetaPixel />
         <noscript>
           <style
             dangerouslySetInnerHTML={{
