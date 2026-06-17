@@ -24,9 +24,9 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const title = "Vibe Code Website Bootcamp | Best Solutions Skill";
+const title = "Best Solutions Skill | เรียนสร้างเว็บและทักษะดิจิทัลด้วย AI";
 const description =
-  "คอร์สสอนสด 2 วัน สร้างเว็บไซต์ด้วย Vibe Code และ AI ตั้งแต่ Design, Next.js, Tracking จน Deploy ออนไลน์ พร้อมต่อยอดเป็น Portfolio สมัครงาน รับงาน หรือสร้างรายได้";
+  "แหล่งเรียนรู้สร้างเว็บไซต์และทักษะดิจิทัลด้วย AI — คอร์สเรียนสดแบบจับมือทำ พร้อมบทความความรู้ ต่อยอดเป็นอาชีพหรือรายได้";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bestsolutionskill.com"),
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     type: "website",
     title,
     description:
-      "คอร์สสอนสด 2 วัน สร้างเว็บไซต์ด้วย Vibe Code และ AI พร้อม Tracking, Deploy และแนวทางต่อยอดอาชีพ",
+      "แหล่งเรียนรู้สร้างเว็บไซต์และทักษะดิจิทัลด้วย AI — คอร์สเรียนสดและบทความความรู้",
     images: ["/logo.png"],
   },
   twitter: { card: "summary_large_image" },

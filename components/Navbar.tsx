@@ -2,7 +2,7 @@ export function Navbar() {
   return (
     <header className="nav" id="nav">
       <div className="container nav-inner">
-        <a className="nav-brand" href="#top" aria-label="Best Solutions Skill หน้าแรก">
+        <a className="nav-brand" href="/" aria-label="Best Solutions Skill หน้าแรก">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.png" alt="" width={40} height={40} />
           <span>
@@ -10,6 +10,7 @@ export function Navbar() {
           </span>
         </a>
         <nav className="navmenu" id="navmenu" aria-label="เมนูหลัก">
+          <a href="/courses">คอร์สทั้งหมด</a>
           <a href="#workflow">Workflow</a>
           <a href="#portfolio">ผลงาน</a>
           <a href="#curriculum">หลักสูตร</a>

@@ -12,10 +12,9 @@ export function Footer() {
             </div>
           </div>
           <nav className="footer-links" aria-label="เมนูส่วนท้าย">
-            <a href="#workflow">Workflow</a>
-            <a href="#curriculum">หลักสูตร</a>
-            <a href="#pricing">ราคา</a>
-            <a href="#faq">คำถามที่พบบ่อย</a>
+            <a href="/courses">คอร์สเรียน</a>
+            <a href="/articles">บทความ</a>
+            <a href="/#about">เกี่ยวกับเรา</a>
             <a className="btn btn-primary" href="https://lin.ee/Q22m30X" target="_blank" rel="noopener noreferrer" data-cta="line">
               ติดต่อสอบถาม
             </a>
