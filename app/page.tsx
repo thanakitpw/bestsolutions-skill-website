@@ -1,37 +1,21 @@
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { TrustBar } from "@/components/TrustBar";
-import { Problem } from "@/components/Problem";
-import { Workflow } from "@/components/Workflow";
-import { Build } from "@/components/Build";
-import { Portfolio } from "@/components/Portfolio";
-import { Curriculum } from "@/components/Curriculum";
-import { Bonus } from "@/components/Bonus";
-import { Instructor } from "@/components/Instructor";
-import { Pricing } from "@/components/Pricing";
-import { Tools } from "@/components/Tools";
-import { Faq } from "@/components/Faq";
-import { FinalCta } from "@/components/FinalCta";
+import { SiteNavbar } from "@/components/SiteNavbar";
+import { HomeHero } from "@/components/home/HomeHero";
+import { FeaturedCourses } from "@/components/home/FeaturedCourses";
+import { LatestArticles } from "@/components/home/LatestArticles";
+import { About } from "@/components/home/About";
+import { HomeCta } from "@/components/home/HomeCta";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <SiteNavbar />
       <main id="top">
-        <Hero />
-        <TrustBar />
-        <Problem />
-        <Workflow />
-        <Build />
-        <Portfolio />
-        <Curriculum />
-        <Bonus />
-        <Instructor />
-        <Pricing />
-        <Tools />
-        <Faq />
-        <FinalCta />
+        <HomeHero />
+        <FeaturedCourses />
+        <LatestArticles />
+        <About />
+        <HomeCta />
       </main>
       <Footer />
     </>
