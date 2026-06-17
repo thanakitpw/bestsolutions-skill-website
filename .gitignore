@@ -25,5 +25,8 @@ build/
 # build info
 tsconfig.tsbuildinfo
 
+# Supabase CLI temp
+supabase/.temp/
+
 # local source mockups (originals)
 /portfolio/
