@@ -12,7 +12,7 @@ export function FeaturedCourses() {
           </h2>
           <p>คอร์สเรียนสดแบบจับมือทำ พร้อมแนวทางต่อยอดเป็นอาชีพหรือรายได้</p>
         </div>
-        <div className="grid grid-3 js-reveal">
+        <div className="course-grid js-reveal">
           {courses.map((c) => (
             <CourseCard key={c.slug} course={c} />
           ))}

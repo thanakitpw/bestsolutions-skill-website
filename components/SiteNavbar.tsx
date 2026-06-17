@@ -1,3 +1,5 @@
+import { ARTICLES_ENABLED } from "@/lib/features";
+
 export function SiteNavbar() {
   return (
     <header className="nav" id="nav">
@@ -12,7 +14,7 @@ export function SiteNavbar() {
         <nav className="navmenu" id="navmenu" aria-label="เมนูหลัก">
           <a href="/">หน้าแรก</a>
           <a href="/courses">คอร์สเรียน</a>
-          <a href="/articles">บทความ</a>
+          {ARTICLES_ENABLED ? <a href="/articles">บทความ</a> : null}
           <a href="/#about">เกี่ยวกับเรา</a>
           <a
             className="btn btn-primary navmenu-cta"

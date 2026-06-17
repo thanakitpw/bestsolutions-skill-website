@@ -2,6 +2,7 @@ export type Course = {
   slug: string;
   title: string;
   subtitle: string;
+  image: string;
   tag: string;
   schedule: string;
   priceNow: string;
@@ -16,6 +17,7 @@ export const courses: Course[] = [
     title: "Vibe Code Website Bootcamp",
     subtitle:
       "สร้างเว็บไซต์ด้วย AI ใน 2 วัน ตั้งแต่วางไอเดีย ออกแบบ ขึ้น Next.js ติดตั้ง Tracking จน Deploy ออนไลน์",
+    image: "/courses/vibe-code-website-bootcamp.svg",
     tag: "เรียนสด 2 วัน",
     schedule: "27–28 มิ.ย. 2026 · เสาร์–อาทิตย์",
     priceNow: "2,990.-",

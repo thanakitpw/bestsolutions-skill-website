@@ -1,3 +1,5 @@
+import { ARTICLES_ENABLED } from "@/lib/features";
+
 export function Footer() {
   return (
     <footer className="footer">
@@ -13,7 +15,7 @@ export function Footer() {
           </div>
           <nav className="footer-links" aria-label="เมนูส่วนท้าย">
             <a href="/courses">คอร์สเรียน</a>
-            <a href="/articles">บทความ</a>
+            {ARTICLES_ENABLED ? <a href="/articles">บทความ</a> : null}
             <a href="/#about">เกี่ยวกับเรา</a>
             <a className="btn btn-primary" href="https://lin.ee/Q22m30X" target="_blank" rel="noopener noreferrer" data-cta="line">
               ติดต่อสอบถาม

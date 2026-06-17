@@ -1,3 +1,5 @@
+import { ARTICLES_ENABLED } from "@/lib/features";
+
 export function HomeHero() {
   return (
     <section className="hero">
@@ -18,9 +20,11 @@ export function HomeHero() {
           <a className="btn btn-primary btn-block-sm" href="/courses">
             ดูคอร์สเรียน →
           </a>
-          <a className="btn btn-outline btn-block-sm" href="/articles">
-            อ่านบทความ
-          </a>
+          {ARTICLES_ENABLED ? (
+            <a className="btn btn-outline btn-block-sm" href="/articles">
+              อ่านบทความ
+            </a>
+          ) : null}
         </div>
       </div>
     </section>

@@ -23,7 +23,7 @@ export default function CoursesPage() {
               </h2>
               <p>เลือกคอร์สที่ใช่สำหรับคุณ เรียนสดแบบจับมือทำ พร้อมต่อยอดเป็นอาชีพ</p>
             </div>
-            <div className="grid grid-3 js-reveal">
+            <div className="course-grid js-reveal">
               {courses.map((c) => (
                 <CourseCard key={c.slug} course={c} />
               ))}
