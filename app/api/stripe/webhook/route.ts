@@ -14,10 +14,14 @@ export async function POST(req: Request) {
   }
 
   const sig = req.headers.get("stripe-signature");
+  if (!sig) {
+    return NextResponse.json({ error: "missing stripe-signature" }, { status: 400 });
+  }
+
   const raw = await req.text();
   let event: Stripe.Event;
   try {
-    event = stripe.webhooks.constructEvent(raw, sig!, secret);
+    event = stripe.webhooks.constructEvent(raw, sig, secret);
   } catch (err) {
     return NextResponse.json({ error: `signature: ${(err as Error).message}` }, { status: 400 });
   }
@@ -30,10 +34,15 @@ export async function POST(req: Request) {
     if (session.payment_status === "paid") {
       try {
         const paymentIntent =
-          typeof session.payment_intent === "string" ? session.payment_intent : "";
+          typeof session.payment_intent === "string"
+            ? session.payment_intent
+            : (session.payment_intent as Stripe.PaymentIntent | null)?.id ?? "";
         const { updated } = await markOrderPaid(session.id, paymentIntent);
         if (updated) {
-          const order = await getOrderBySessionId(session.id);
+          const order = await getOrderBySessionId(session.id).catch((e) => {
+            console.error("getOrderBySessionId failed after markOrderPaid", session.id, e);
+            return null;
+          });
           if (order) {
             // side-effects: ถ้าล้มก็ log แต่ห้ามทำให้ webhook fail
             await sendPurchaseEvent({
