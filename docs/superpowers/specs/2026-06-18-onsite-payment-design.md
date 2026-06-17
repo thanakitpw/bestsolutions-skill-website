@@ -127,8 +127,9 @@ Migration ใหม่: `supabase/migrations/0002_orders.sql`
 
 **`POST /api/stripe/webhook`**
 - verify ด้วย `STRIPE_WEBHOOK_SECRET`
-- จัดการ `checkout.session.completed`: ดึง `order_id`/`event_id` จาก metadata → ถ้า order ยัง != paid → markPaid → CAPI Purchase → notify LINE
+- จัดการ `checkout.session.completed` **และ `checkout.session.async_payment_succeeded`** (PromptPay จ่ายแบบ async — `completed` อาจมาตอน `payment_status: unpaid` แล้ว `async_payment_succeeded` มาทีหลังตอนเงินเข้าจริง) → act เฉพาะเมื่อ `payment_status === "paid"` → markPaid → CAPI Purchase → notify LINE
 - ตอบ 200 เสมอเมื่อรับเรื่องสำเร็จ (กัน Stripe retry ซ้ำ); ทุก side-effect idempotent
+- ⚠️ **ตอน deploy ต้อง subscribe webhook endpoint ทั้ง 2 events** — ถ้าลืม `async_payment_succeeded` ออร์เดอร์ PromptPay จะไม่ถูก mark paid เลย
 
 ## 9. Error handling
 
