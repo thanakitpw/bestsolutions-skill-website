@@ -17,7 +17,7 @@ describe("computeOrder", () => {
   it("group 2 คน = 518000 สตางค์", () => {
     expect(computeOrder("group", 2).amountTotal).toBe(518000);
   });
-  it("group ต่ำกว่า min (1) โยน error", () => {
+  it("group ต่ำกว่า min (qty=1 ต่ำกว่า min=2) โยน error", () => {
     expect(() => computeOrder("group", 1)).toThrow();
   });
   it("private เกิน max โยน error", () => {
@@ -28,5 +28,8 @@ describe("computeOrder", () => {
   });
   it("qty ไม่ใช่จำนวนเต็มบวกโยน error", () => {
     expect(() => computeOrder("early-bird", 0)).toThrow();
+  });
+  it("qty ทศนิยมโยน error", () => {
+    expect(() => computeOrder("early-bird", 1.5)).toThrow();
   });
 });
