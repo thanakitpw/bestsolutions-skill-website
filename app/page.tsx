@@ -6,6 +6,8 @@ import { About } from "@/components/home/About";
 import { HomeCta } from "@/components/home/HomeCta";
 import { Footer } from "@/components/Footer";
 
+export const revalidate = 60;
+
 export default function Home() {
   return (
     <>
