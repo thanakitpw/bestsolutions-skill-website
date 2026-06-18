@@ -5,7 +5,9 @@ import { loadStripe } from "@stripe/stripe-js";
 import { EmbeddedCheckoutProvider, EmbeddedCheckout } from "@stripe/react-stripe-js";
 import { PLANS, type PlanId } from "@/lib/plans";
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? "");
+const PUBLISHABLE_KEY = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
+// อย่าเรียก loadStripe("") เพราะ Stripe จะ throw ทั้งหน้า — มี key ค่อยสร้าง promise
+const stripePromise = PUBLISHABLE_KEY ? loadStripe(PUBLISHABLE_KEY) : null;
 
 export function CheckoutForm({ plan }: { plan: PlanId }) {
   const def = PLANS[plan];
@@ -40,6 +42,10 @@ export function CheckoutForm({ plan }: { plan: PlanId }) {
 
   function start() {
     setError(null);
+    if (!stripePromise) {
+      setError("ระบบชำระเงินยังไม่พร้อมใช้งาน กรุณาติดต่อทีมงานทาง LINE");
+      return;
+    }
     if (!name.trim() || !email.trim() || !phone.trim()) {
       setError("กรอกชื่อ อีเมล และเบอร์โทรให้ครบ");
       return;
