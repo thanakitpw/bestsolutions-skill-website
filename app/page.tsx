@@ -1,6 +1,7 @@
 import { SiteNavbar } from "@/components/SiteNavbar";
 import { HomeHero } from "@/components/home/HomeHero";
-import { FeaturedCourses } from "@/components/home/FeaturedCourses";
+import { CourseFeature } from "@/components/home/CourseFeature";
+import { EbookFeature } from "@/components/home/EbookFeature";
 import { LatestArticles } from "@/components/home/LatestArticles";
 import { About } from "@/components/home/About";
 import { HomeCta } from "@/components/home/HomeCta";
@@ -15,7 +16,8 @@ export default function Home() {
       <SiteNavbar />
       <main id="top">
         <HomeHero />
-        <FeaturedCourses />
+        <CourseFeature />
+        <EbookFeature />
         {ARTICLES_ENABLED ? <LatestArticles /> : null}
         <About />
         <HomeCta />

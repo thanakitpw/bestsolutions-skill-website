@@ -33,15 +33,15 @@ export function CourseCard({ course }: { course: Course }) {
               strokeLinejoin="round"
               aria-hidden="true"
             >
-              <rect x="3" y="4" width="18" height="18" rx="2" />
-              <path d="M16 2v4M8 2v4M3 10h18" />
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
             </svg>
             {course.schedule}
           </span>
           <div className="course-card-buy">
             <span className="course-card-price">
-              <b className="g-text">{course.priceNow}</b>{" "}
-              <s className="text-dim">{course.priceWas}</s>
+              <b className="g-text">{course.priceNow}</b>
+              {course.priceWas ? <s className="text-dim">{course.priceWas}</s> : null}
             </span>
             <span className="course-card-cta">ดูรายละเอียด →</span>
           </div>

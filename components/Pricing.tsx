@@ -1,20 +1,21 @@
-const groupFeatures = [
-  "เรียนสด 2 วัน รวม 10 ชั่วโมง",
-  "ราคา Early Bird 2,990.- จากปกติ 4,990.-",
-  "Early Bird รับจำกัด 10 ที่นั่ง",
-  "สมัคร 2 คน เหลือคนละ 2,590.-",
-  "สไลด์ + Replay ดูย้อนหลัง",
-  "Prompt Pack + Starter Template",
-  "Consult หลังเรียนจบ + Community ถามตอบ",
-];
+const LINE_URL = "https://lin.ee/Q22m30X";
 
 const privateFeatures = [
-  "เรียนแบบส่วนตัว 1:1",
+  "เรียนตัวต่อตัว 1:1 รวม 5 ชั่วโมง",
   "เลือกวันเวลาเรียนเองได้",
   "โฟกัสเว็บไซต์หรือเป้าหมายอาชีพของคุณ",
   "ช่วยวาง Brief, Design Preview และ Next.js",
   "ช่วยดู Tracking และ Deploy ตามโจทย์",
-  "เหมาะกับคนที่ต้องการความเร็วและการดูแลเฉพาะตัว",
+  "Consult หลังเรียนจบ + ถามต่อได้",
+];
+
+const groupFeatures = [
+  "มาเรียนเป็นกลุ่มเล็ก / กับเพื่อน",
+  "ราคาพิเศษต่อคนเมื่อมาเป็นกลุ่ม",
+  "จัดวันเวลาเรียนตามสะดวก",
+  "เนื้อหาเดียวกับคลาสตัวต่อตัว",
+  "เหมาะกับเพื่อน ทีมเล็ก หรือครอบครัว",
+  "ทักไลน์เพื่อประเมินรอบและราคา",
 ];
 
 const onsiteFeatures = [
@@ -35,41 +36,17 @@ export function Pricing() {
           <h2>
             เลือกรูปแบบการเรียน<span className="g-text">ที่เหมาะกับเป้าหมายของคุณ</span>
           </h2>
-          <p>เรียนแบบกลุ่มในรอบ Bootcamp เลือก Private ที่จัดเวลาเองได้ หรือจัดสอนนอกสถานที่สำหรับทีม</p>
+          <p>เริ่มจากคลาสตัวต่อตัวที่จัดเวลาเองได้ มาเรียนเป็นกลุ่มเล็กในราคาพิเศษ หรือจัดสอนนอกสถานที่สำหรับทีม</p>
         </div>
         <div className="grid grid-3 pricing-grid js-reveal">
           <article className="pricing-card featured">
             <span className="pc-badge">แนะนำ</span>
-            <span className="eyebrow">Group Class</span>
-            <h3 className="pc-title">Vibe Code Bootcamp</h3>
-            <p className="pc-date">📅 รอบสอน เสาร์–อาทิตย์ ที่ 27–28 มิถุนายน 2026</p>
-            <div className="pc-price">
-              <span className="pc-now g-text">2,990.-</span>
-              <span className="pc-was">4,990.-</span>
-            </div>
-            <p className="pc-save">Early Bird รับจำกัด 10 ที่นั่ง · มา 2 คน เหลือคนละ 2,590.-</p>
-            <p className="pc-for">
-              เหมาะกับคนที่อยากเริ่มทำเว็บด้วย AI แบบเป็นระบบ มีเว็บเป็นผลงาน และมี Community ถามต่อ
-            </p>
-            <ul className="check-list pc-list">
-              {groupFeatures.map((f, i) => (
-                <li key={i}>
-                  <span className="ck">✓</span> {f}
-                </li>
-              ))}
-            </ul>
-            <a className="btn btn-primary" href="/checkout?plan=group">
-              สมัคร Group Class
-            </a>
-          </article>
-
-          <article className="pricing-card">
             <span className="eyebrow">Private Class</span>
-            <h3 className="pc-title">เรียนเดี่ยว 1:1</h3>
+            <h3 className="pc-title">เรียนตัวต่อตัว 1:1</h3>
             <div className="pc-price">
-              <span className="pc-now">6,990.-</span>
+              <span className="pc-now g-text">6,900.-</span>
             </div>
-            <p className="pc-save">เลือกเวลาเรียนเองได้</p>
+            <p className="pc-save">5 ชั่วโมง · เลือกวันเวลาเรียนเองได้</p>
             <p className="pc-for">
               เหมาะกับคนที่มีโจทย์เว็บจริง อยากให้สอนจับมือทำเฉพาะตามเป้าหมายของตัวเอง
             </p>
@@ -80,8 +57,42 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <a className="btn btn-outline" href="/checkout?plan=private">
-              สมัคร Private Class
+            <a
+              className="btn btn-primary"
+              href={LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="line"
+            >
+              ทักไลน์เพื่อสมัคร
+            </a>
+          </article>
+
+          <article className="pricing-card">
+            <span className="eyebrow">Group Class</span>
+            <h3 className="pc-title">เรียนเป็นกลุ่มเล็ก</h3>
+            <div className="pc-price">
+              <span className="pc-now">ทักไลน์</span>
+            </div>
+            <p className="pc-save">ราคาพิเศษต่อคนเมื่อมาเป็นกลุ่ม</p>
+            <p className="pc-for">
+              เหมาะกับเพื่อน ทีมเล็ก หรือครอบครัว ที่อยากเรียนทำเว็บด้วย AI ไปพร้อมกัน
+            </p>
+            <ul className="check-list pc-list">
+              {groupFeatures.map((f, i) => (
+                <li key={i}>
+                  <span className="ck">✓</span> {f}
+                </li>
+              ))}
+            </ul>
+            <a
+              className="btn btn-outline"
+              href={LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="line"
+            >
+              ทักไลน์สอบถามกลุ่ม
             </a>
           </article>
 
@@ -89,7 +100,7 @@ export function Pricing() {
             <span className="eyebrow">On-site Training</span>
             <h3 className="pc-title">สอนนอกสถานที่ / องค์กร</h3>
             <div className="pc-price">
-              <span className="pc-now">ติดต่อทาง LINE</span>
+              <span className="pc-now">ทักไลน์</span>
             </div>
             <p className="pc-save">เลือกเวลาและรูปแบบการสอนได้</p>
             <p className="pc-for">
@@ -102,7 +113,13 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <a className="btn btn-outline" href="https://lin.ee/Q22m30X" target="_blank" rel="noopener noreferrer" data-cta="line">
+            <a
+              className="btn btn-outline"
+              href={LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="line"
+            >
               คุยรายละเอียด On-site
             </a>
           </article>

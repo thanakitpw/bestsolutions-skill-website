@@ -14,6 +14,7 @@ export function Footer() {
             </div>
           </div>
           <nav className="footer-links" aria-label="เมนูส่วนท้าย">
+            <a href="/ebooks">E-book</a>
             <a href="/courses">คอร์สเรียน</a>
             {ARTICLES_ENABLED ? <a href="/articles">บทความ</a> : null}
             <a href="/#about">เกี่ยวกับเรา</a>

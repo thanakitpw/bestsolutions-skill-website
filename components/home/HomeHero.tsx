@@ -1,5 +1,3 @@
-import { ARTICLES_ENABLED } from "@/lib/features";
-
 export function HomeHero() {
   return (
     <section className="hero">
@@ -13,18 +11,16 @@ export function HomeHero() {
           ด้วย <span className="g-text">AI</span> แบบลงมือทำจริง
         </h1>
         <p className="hero-sub home-hero-sub">
-          Best Solutions Skill รวมคอร์สเรียนสดและบทความ ที่สอนตั้งแต่พื้นฐานจนนำไปใช้ได้จริง
+          Best Solutions Skill รวมคอร์สสอนตัวต่อตัวและ E-book ที่สอนตั้งแต่พื้นฐานจนนำไปใช้ได้จริง
           เปลี่ยนไอเดียให้เป็นเว็บไซต์และผลงานดิจิทัลของคุณเอง
         </p>
         <div className="cta-row cta-center">
           <a className="btn btn-primary btn-block-sm" href="/courses">
             ดูคอร์สเรียน →
           </a>
-          {ARTICLES_ENABLED ? (
-            <a className="btn btn-outline btn-block-sm" href="/articles">
-              อ่านบทความ
-            </a>
-          ) : null}
+          <a className="btn btn-outline btn-block-sm" href="/ebooks">
+            ดู E-book
+          </a>
         </div>
       </div>
     </section>

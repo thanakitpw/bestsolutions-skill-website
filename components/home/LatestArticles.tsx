@@ -1,5 +1,6 @@
 import { getPublishedArticles } from "@/lib/articles";
 import { ArticleCard } from "@/components/articles/ArticleCard";
+import { Icon } from "@/components/Icon";
 
 export async function LatestArticles() {
   const articles = await getPublishedArticles(3);
@@ -15,7 +16,7 @@ export async function LatestArticles() {
         </div>
         {articles.length === 0 ? (
           <div className="card coming-soon js-reveal">
-            <span className="coming-soon-emoji">🚀</span>
+            <Icon name="sparkles" className="coming-soon-emoji" />
             <b>บทความกำลังจะมาเร็วๆ นี้</b>
             <p className="text-dim">ติดตามเนื้อหาใหม่ได้ที่หน้านี้ หรือทักเราทาง LINE</p>
           </div>

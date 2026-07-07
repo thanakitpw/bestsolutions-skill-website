@@ -2,7 +2,7 @@ import { Star, Video, Play, Chat } from "@/components/icons";
 
 const stats = [
   { Icon: Star, big: "สอนแบบจับมือทำ", sub: "ทำตามได้ทีละขั้น" },
-  { Icon: Video, big: "2 วัน · 10 ชั่วโมง", sub: "เรียนสดแบบเข้มข้น" },
+  { Icon: Video, big: "ตัวต่อตัว · 5 ชั่วโมง", sub: "เรียน 1:1 เลือกเวลาเองได้" },
   { Icon: Play, big: "Deploy + Tracking", sub: "ทำเว็บให้วัดผลได้" },
   { Icon: Chat, big: "Consult + Community", sub: "ถามต่อหลังเรียนจบ" },
 ];

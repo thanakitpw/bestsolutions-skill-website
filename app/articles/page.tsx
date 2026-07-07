@@ -3,6 +3,7 @@ import { SiteNavbar } from "@/components/SiteNavbar";
 import { Footer } from "@/components/Footer";
 import { ArticleCard } from "@/components/articles/ArticleCard";
 import { getPublishedArticles } from "@/lib/articles";
+import { Icon } from "@/components/Icon";
 
 export const revalidate = 60;
 
@@ -29,7 +30,7 @@ export default async function ArticlesPage() {
             </div>
             {articles.length === 0 ? (
               <div className="card coming-soon js-reveal">
-                <span className="coming-soon-emoji">🚀</span>
+                <Icon name="sparkles" className="coming-soon-emoji" />
                 <b>เร็วๆ นี้</b>
                 <p className="text-dim">ระหว่างนี้ดูคอร์สเรียนของเราได้เลย</p>
                 <a className="btn btn-primary" href="/courses">

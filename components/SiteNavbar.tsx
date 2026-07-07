@@ -13,6 +13,7 @@ export function SiteNavbar() {
         </a>
         <nav className="navmenu" id="navmenu" aria-label="เมนูหลัก">
           <a href="/">หน้าแรก</a>
+          <a href="/ebooks">E-book</a>
           <a href="/courses">คอร์สเรียน</a>
           {ARTICLES_ENABLED ? <a href="/articles">บทความ</a> : null}
           <a href="/#about">เกี่ยวกับเรา</a>

@@ -18,7 +18,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Vibe Code Website Bootcamp | Best Solutions Skill",
   description:
-    "คอร์สสอนสด 2 วัน สร้างเว็บไซต์ด้วย Vibe Code และ AI ตั้งแต่ Design, Next.js, Tracking จน Deploy ออนไลน์ พร้อมต่อยอดเป็น Portfolio สมัครงาน รับงาน หรือสร้างรายได้",
+    "คอร์สสอนตัวต่อตัว 1:1 สร้างเว็บไซต์ด้วย Vibe Code และ AI 5 ชั่วโมง ตั้งแต่ Design, Next.js, Tracking จน Deploy ออนไลน์ พร้อมต่อยอดเป็น Portfolio สมัครงาน รับงาน หรือสร้างรายได้",
 };
 
 export default function VibeCodeBootcampPage() {

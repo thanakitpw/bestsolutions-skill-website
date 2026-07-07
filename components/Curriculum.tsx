@@ -12,9 +12,9 @@ type ClassItem = {
 const classes: ClassItem[] = [
   {
     id: "day1m1",
-    n: "เสาร์ 27 มิ.ย. · ช่วงเช้า",
+    n: "โมดูล 1",
     name: "Vibe Code Foundation",
-    time: "10:00-12:00",
+    time: "",
     open: true,
     items: [
       "Vibe Code คืออะไร และใช้ AI ช่วยทำเว็บได้อย่างไร",
@@ -28,9 +28,9 @@ const classes: ClassItem[] = [
   },
   {
     id: "day1m2",
-    n: "เสาร์ 27 มิ.ย. · ช่วงบ่าย",
+    n: "โมดูล 2",
     name: "Website Design & HTML Preview",
-    time: "13:00-16:00",
+    time: "",
     items: [
       "วาง Sitemap, Section, User Flow และตำแหน่ง CTA",
       "พื้นฐาน UX/UI ที่จำเป็น: Layout, Typography, Color, Spacing และ Responsive",
@@ -43,9 +43,9 @@ const classes: ClassItem[] = [
   },
   {
     id: "day2m1",
-    n: "อาทิตย์ 28 มิ.ย. · ช่วงเช้า",
+    n: "โมดูล 3",
     name: "Build Website with Next.js",
-    time: "10:00-12:00",
+    time: "",
     items: [
       "เข้าใจโครงสร้างโปรเจกต์ Next.js เบื้องต้น",
       "แปลง HTML Preview เป็น Component",
@@ -59,9 +59,9 @@ const classes: ClassItem[] = [
   },
   {
     id: "day2m2",
-    n: "อาทิตย์ 28 มิ.ย. · ช่วงบ่าย",
+    n: "โมดูล 4",
     name: "Tracking, Deploy & Career Roadmap",
-    time: "13:00-16:00",
+    time: "",
     items: [
       "ทำ Contact Form / Lead Form เบื้องต้น และแนวคิดการเชื่อม Supabase",
       "เชื่อม GitHub กับ Vercel เพื่อ Deploy อัตโนมัติทุกครั้งที่ push โค้ด",
@@ -83,10 +83,10 @@ export function Curriculum() {
         <div className="section-head js-reveal">
           <span className="eyebrow">Curriculum</span>
           <h2>
-            หลักสูตรเรียนสด <span className="g-text">2 วัน 4 โมดูล</span> แบบเข้มข้น
+            หลักสูตร <span className="g-text">4 โมดูล</span> เรียนตัวต่อตัว
           </h2>
           <p>
-            เรียนวันละ 5 ชั่วโมง เวลา 10:00-12:00 และ 13:00-16:00
+            เรียนตัวต่อตัว 1:1 รวม 5 ชั่วโมง ปรับจังหวะและเนื้อหาให้เหมาะกับผู้เรียน
             ครอบคลุมตั้งแต่วางไอเดีย ทำเว็บ ติด Tracking จน Deploy และต่อยอดอาชีพ
           </p>
         </div>
@@ -100,7 +100,7 @@ export function Curriculum() {
                   aria-controls={c.id}
                 >
                   <span className="acc-title">
-                    <span className="num">{c.n} · {c.time}</span>
+                    <span className="num">{c.time ? `${c.n} · ${c.time}` : c.n}</span>
                     <span className="acc-name">{c.name}</span>
                   </span>
                   <span className="sign" aria-hidden="true">

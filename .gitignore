@@ -30,3 +30,11 @@ supabase/.temp/
 
 # local source mockups (originals)
 /portfolio/
+
+# AI agent tooling (local, ไม่ขึ้น repo)
+.agents/
+.claude/
+.codex/
+.devin/
+.windsurf/
+skills-lock.json

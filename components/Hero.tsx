@@ -1,9 +1,11 @@
 const bullets = [
-  "เรียนสด 2 วัน รวม 10 ชั่วโมง แบบเข้มข้น",
+  "เรียนตัวต่อตัว 1:1 รวม 5 ชั่วโมง · เลือกวันเวลาเองได้",
   "ใช้ AI ช่วยวางไอเดีย ออกแบบ เขียนโค้ด และแก้ Error",
   "ติดตั้ง Tracking พื้นฐาน เช่น GA4, Google Tag และ Search Console",
   "ต่อยอดเป็น Portfolio สมัครงาน รับงาน หรือสร้างรายได้",
 ];
+
+const LINE_URL = "https://lin.ee/Q22m30X";
 
 export function Hero() {
   return (
@@ -11,15 +13,12 @@ export function Hero() {
       <div className="container hero-inner">
         <div className="hero-copy js-reveal">
           <span className="pill">
-            <span className="dot" /> Vibe Code Bootcamp · เรียนสด 2 วัน
-          </span>
-          <span className="hero-schedule">
-            📅 รอบสอน เสาร์–อาทิตย์ ที่ <b>27–28 มิถุนายน 2026</b>
+            <span className="dot" /> Vibe Code · เรียนตัวต่อตัว 1:1
           </span>
           <h1>
             สร้างเว็บไซต์ <span className="g-text">Vibe Code</span>
             <br />
-            ด้วย AI ใน 2 วัน
+            ด้วย AI แบบตัวต่อตัว
           </h1>
           <p className="hero-sub">
             เรียนตั้งแต่วางไอเดีย ออกแบบ ทำ HTML Preview ขึ้น Next.js ติดตั้ง Tracking
@@ -33,18 +32,23 @@ export function Hero() {
             ))}
           </ul>
           <div className="hero-price">
-            <span className="eyebrow">Early Bird · 10 Seats Only</span>
-            <span className="hero-price-now g-text">2,990.-</span>
-            <span className="hero-price-was">4,990.-</span>
-            <span className="pill">รับจำกัด 10 ที่นั่ง</span>
-            <span className="pill">มา 2 คน เหลือคนละ 2,590.-</span>
+            <span className="eyebrow">เรียนตัวต่อตัว 1:1</span>
+            <span className="hero-price-now g-text">6,900.-</span>
+            <span className="pill">5 ชั่วโมง</span>
+            <span className="pill">เลือกวันเวลาเรียนเองได้</span>
           </div>
           <div className="cta-row">
-            <a className="btn btn-primary btn-block-sm" href="/checkout?plan=early-bird">
-              สมัคร Vibe Code Bootcamp →
+            <a
+              className="btn btn-primary btn-block-sm"
+              href={LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="line"
+            >
+              ทักไลน์เพื่อสมัครเรียน →
             </a>
             <a className="btn btn-outline btn-block-sm" href="#pricing">
-              ดูราคา Private / On-site
+              ดูรูปแบบการเรียน
             </a>
           </div>
         </div>
@@ -65,9 +69,9 @@ export function Hero() {
             <span className="text-dim">ครบ จบ ในที่เดียว</span>
           </div>
           <div className="float float-br">
-            <b>27–28 มิ.ย. 2026</b>
+            <b>เรียนตัวต่อตัว 1:1</b>
             <br />
-            <span className="text-dim">เสาร์–อาทิตย์ · 2 วัน 10 ชม.</span>
+            <span className="text-dim">5 ชั่วโมง · เลือกเวลาเองได้</span>
           </div>
         </div>
       </div>
