@@ -6,9 +6,10 @@ import { Icon } from "../Icon";
 // CTA หลักทุกจุด = ปุ่มดาวน์โหลด ลิงก์ไป Google Drive โดยตรง (เปิดแท็บใหม่)
 // ยกเนื้อหาบางส่วนมาจากหน้า /ebooks/start-business-ai-30-days แล้วปรับ copy ให้เป็นของแจกฟรี
 
-// ลิงก์ไฟล์ดาวน์โหลดบน Google Drive
-const DOWNLOAD_URL =
-  "https://drive.google.com/file/d/1Oo64-A5vG8aJzIyt1GSTbS3Dv3ctw9EE/view?usp=sharing";
+// ไฟล์ PDF โฮสต์บนโดเมนเราเอง (public/downloads/) — ลิงก์ลงท้าย .pdf ให้ GA4 จับ file_download อัตโนมัติ
+const DOWNLOAD_URL = "/downloads/start-business-ai-30-days-free.pdf";
+// ชื่อไฟล์ที่ผู้ใช้จะเห็นตอนบันทึกลงเครื่อง
+const DOWNLOAD_FILENAME = "เริ่มต้นธุรกิจด้วย AI ใน 30 วัน (ฉบับฟรี).pdf";
 
 const heroBullets: string[] = [
   "รวมพื้นฐานการเริ่มต้นทำธุรกิจด้วย AI ไว้ในไฟล์เดียว อ่านจบเห็นภาพรวมทั้งเส้นทาง",
@@ -67,7 +68,7 @@ const faqs: { id: string; q: string; a: string }[] = [
   {
     id: "free-faq-3",
     q: "โหลดไฟล์ยังไง?",
-    a: "กดปุ่ม “ดาวน์โหลดฟรี” ระบบจะพาไปที่ไฟล์บน Google Drive จากนั้นกดปุ่มดาวน์โหลดมุมขวาบนเพื่อบันทึกไฟล์ หรืออ่านบนเบราว์เซอร์ได้เลย",
+    a: "กดปุ่ม “ดาวน์โหลดฟรี” ระบบจะเริ่มดาวน์โหลดไฟล์ PDF ลงเครื่องทันที เปิดอ่านได้ทุกอุปกรณ์ ทั้งมือถือ แท็บเล็ต และคอมพิวเตอร์",
   },
   {
     id: "free-faq-4",
@@ -87,8 +88,7 @@ function DownloadButton({
     <a
       className={`btn btn-primary sp-cta-btn ${className}`.trim()}
       href={DOWNLOAD_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      download={DOWNLOAD_FILENAME}
       data-cta="ebook-free-download"
     >
       <Icon name="download" aria-hidden="true" /> {label}
@@ -131,7 +131,7 @@ export function EbookFreePage({ ebook }: { ebook: Ebook }) {
                 <DownloadButton label="ดาวน์โหลดฟรีทันที" />
               </div>
               <p className="sp-hero-note text-dim">
-                ไม่ต้องกรอกบัตร ไม่ต้องชำระเงิน · กดแล้วเปิดไฟล์บน Google Drive ได้เลย
+                ไม่ต้องกรอกบัตร ไม่ต้องชำระเงิน · กดแล้วดาวน์โหลดไฟล์ PDF ได้ทันที
               </p>
             </div>
             <div className="sp-hero-media js-reveal">
@@ -342,7 +342,7 @@ export function EbookFreePage({ ebook }: { ebook: Ebook }) {
               <DownloadButton label="ดาวน์โหลดฟรีทันที" />
             </div>
             <p className="sp-hero-note text-dim">
-              ไฟล์เปิดบน Google Drive · กดปุ่มดาวน์โหลดมุมขวาบนเพื่อบันทึกลงเครื่อง
+              กดแล้วดาวน์โหลดไฟล์ PDF ลงเครื่องทันที · อ่านได้ทุกอุปกรณ์
             </p>
           </div>
         </div>
