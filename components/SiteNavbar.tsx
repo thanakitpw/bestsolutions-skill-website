@@ -16,6 +16,7 @@ export function SiteNavbar() {
           <a href="/ebooks">E-book</a>
           <a href="/courses">คอร์สเรียน</a>
           {ARTICLES_ENABLED ? <a href="/articles">บทความ</a> : null}
+          <a href="/ebooks/free-start-business-ai">ความรู้ฟรี</a>
           <a href="/#about">เกี่ยวกับเรา</a>
           <a
             className="btn btn-primary navmenu-cta"

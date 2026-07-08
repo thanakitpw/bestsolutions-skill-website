@@ -1,7 +1,7 @@
 import type { ReactNode, SVGProps } from "react";
 
 // ชุด icon แบบ inline SVG (line style, ใช้ currentColor) แทน emoji — ปรับขนาดด้วย font-size ของ parent
-export type IconName = "book" | "wrench" | "chat" | "shieldCheck" | "sparkles" | "image";
+export type IconName = "book" | "wrench" | "chat" | "shieldCheck" | "sparkles" | "image" | "download" | "gift";
 
 const ICONS: Record<IconName, ReactNode> = {
   book: (
@@ -34,6 +34,21 @@ const ICONS: Record<IconName, ReactNode> = {
       <rect width="18" height="18" x="3" y="3" rx="2" />
       <circle cx="9" cy="9" r="2" />
       <path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21" />
+    </>
+  ),
+  download: (
+    <>
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <path d="M7 10l5 5 5-5" />
+      <path d="M12 15V3" />
+    </>
+  ),
+  gift: (
+    <>
+      <rect x="3" y="8" width="18" height="4" rx="1" />
+      <path d="M12 8v13" />
+      <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" />
+      <path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5" />
     </>
   ),
 };

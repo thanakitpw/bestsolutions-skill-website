@@ -11,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/courses/vibe-code-website-bootcamp",
     "/ebooks",
     ...ebooks.map((e) => `/ebooks/${e.slug}`),
+    "/ebooks/free-start-business-ai",
     "/articles",
   ].map((path) => ({ url: `${SITE_URL}${path}`, lastModified: new Date() }));
 
