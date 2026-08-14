@@ -1,7 +1,7 @@
 const LINE_URL = "https://lin.ee/Q22m30X";
 
 const privateFeatures = [
-  "เรียนตัวต่อตัว 1:1 รวม 5 ชั่วโมง",
+  "เรียนตัวต่อตัว 1:1 รวม 10 ชั่วโมง",
   "เลือกวันเวลาเรียนเองได้",
   "โฟกัสเว็บไซต์หรือเป้าหมายอาชีพของคุณ",
   "ช่วยวาง Brief, Design Preview และ Next.js",
@@ -44,9 +44,9 @@ export function Pricing() {
             <span className="eyebrow">Private Class</span>
             <h3 className="pc-title">เรียนตัวต่อตัว 1:1</h3>
             <div className="pc-price">
-              <span className="pc-now g-text">6,900.-</span>
+              <span className="pc-now g-text">12,900.-</span>
             </div>
-            <p className="pc-save">5 ชั่วโมง · เลือกวันเวลาเรียนเองได้</p>
+            <p className="pc-save">10 ชั่วโมง · เลือกวันเวลาเรียนเองได้</p>
             <p className="pc-for">
               เหมาะกับคนที่มีโจทย์เว็บจริง อยากให้สอนจับมือทำเฉพาะตามเป้าหมายของตัวเอง
             </p>

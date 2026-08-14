@@ -1,14 +1,55 @@
-import { XCircle } from "@/components/icons";
+import {
+  Bot,
+  Briefcase,
+  Bug,
+  Chart,
+  Code,
+  Palette,
+  Sitemap,
+  Wand,
+} from "@/components/icons";
 
 const pains = [
-  "ใช้ AI แล้วได้หน้าเว็บมา แต่ไม่รู้ว่าควรแก้ตรงไหนให้ใช้งานจริง",
-  "เว็บที่ AI สร้างให้ดูไม่เป็นมืออาชีพ",
-  "ไม่รู้ว่าควรวางโครงหน้าเว็บ กลุ่มเป้าหมาย และ CTA อย่างไร",
-  "ไม่เข้าใจพื้นฐาน Design — Layout, Spacing, Typography และ Responsive",
-  "อยากทำเว็บด้วย Next.js แต่ไม่รู้จะสั่ง AI และจัดโครงโปรเจกต์อย่างไร",
-  "ทำเว็บเสร็จแล้วแต่ไม่รู้ว่าคนเข้าเว็บไหม หรือกดปุ่มอะไรบ้าง",
-  "Deploy เว็บแล้ว Error แต่ไม่รู้จะแก้อย่างไร",
-  "อยากใช้เว็บเป็น Portfolio รับงาน หรือสมัครงาน แต่ไม่รู้จะต่อยอดอย่างไร",
+  {
+    Icon: Bot,
+    title: "AI สร้างเว็บให้แล้ว แต่ยังใช้งานจริงไม่ได้",
+    text: "ไม่รู้ว่าควรแก้ส่วนไหนก่อน เพื่อให้หน้าเว็บพร้อมใช้จริง",
+  },
+  {
+    Icon: Wand,
+    title: "หน้าตาเว็บยังไม่เป็นมืออาชีพ",
+    text: "เว็บดูเหมือน demo มากกว่างานที่ใช้ขายหรือส่งลูกค้าได้",
+  },
+  {
+    Icon: Sitemap,
+    title: "โครงหน้าเว็บและ CTA ยังไม่ชัด",
+    text: "ไม่แน่ใจว่าควรเรียง section, กลุ่มเป้าหมาย และปุ่มหลักอย่างไร",
+  },
+  {
+    Icon: Palette,
+    title: "พื้นฐาน Design ยังไม่แน่น",
+    text: "Layout, Spacing, Typography และ Responsive ยังแก้แบบเดาสุ่ม",
+  },
+  {
+    Icon: Code,
+    title: "เริ่ม Next.js แล้วจัดโปรเจกต์ไม่ถูก",
+    text: "ไม่รู้ว่าจะสั่ง AI แยก component และวางโครงไฟล์อย่างไร",
+  },
+  {
+    Icon: Chart,
+    title: "ทำเว็บเสร็จแล้วแต่วัดผลไม่ได้",
+    text: "ไม่รู้ว่าคนเข้าเว็บไหม กดปุ่มอะไร หรือควร track event ไหน",
+  },
+  {
+    Icon: Bug,
+    title: "Deploy แล้ว Error แต่แก้ไม่ออก",
+    text: "ไม่เข้าใจสาเหตุจาก log และไม่รู้จะให้ AI ช่วย debug ยังไง",
+  },
+  {
+    Icon: Briefcase,
+    title: "ยังต่อยอดเป็น Portfolio ไม่ชัด",
+    text: "อยากใช้สมัครงาน รับงาน หรือขายบริการ แต่ไม่รู้จะเล่างานอย่างไร",
+  },
 ];
 
 export function Problem() {
@@ -26,12 +67,15 @@ export function Problem() {
           </p>
         </div>
         <div className="pain-grid js-reveal">
-          {pains.map((p, i) => (
+          {pains.map(({ Icon, title, text }, i) => (
             <div className="pain" key={i}>
               <span className="pain-ic">
-                <XCircle />
+                <Icon />
               </span>
-              <p>{p}</p>
+              <div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
             </div>
           ))}
         </div>

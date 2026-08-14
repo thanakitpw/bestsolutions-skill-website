@@ -51,3 +51,27 @@ export const Users = () => (
 export const Info = () => (
   <svg {...base}><circle cx="12" cy="12" r="9" /><path d="M12 8h.01M11 12h1v4h1" /></svg>
 );
+export const Bot = () => (
+  <svg {...base}><path d="M12 8V4" /><rect x="4" y="8" width="16" height="12" rx="3" /><path d="M2 14h2M20 14h2" /><path d="M9 13h.01M15 13h.01" /><path d="M9 17h6" /></svg>
+);
+export const Wand = () => (
+  <svg {...base}><path d="M15 4V2M15 10V8M12 5h2M16 5h2" /><path d="M5 21l14-14-2-2L3 19z" /><path d="M9 15l-2-2" /></svg>
+);
+export const Sitemap = () => (
+  <svg {...base}><rect x="9" y="3" width="6" height="4" rx="1" /><rect x="3" y="17" width="6" height="4" rx="1" /><rect x="15" y="17" width="6" height="4" rx="1" /><path d="M12 7v4M6 17v-3a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v3" /></svg>
+);
+export const Palette = () => (
+  <svg {...base}><path d="M12 3a9 9 0 0 0 0 18h1.5a2 2 0 0 0 1.4-3.4 1.9 1.9 0 0 1 1.35-3.25H18a6 6 0 0 0 0-12z" /><path d="M7.5 10h.01M9.5 6.5h.01M14.5 6.5h.01M16.5 10h.01" /></svg>
+);
+export const Code = () => (
+  <svg {...base}><path d="M8 9l-4 3 4 3" /><path d="M16 9l4 3-4 3" /><path d="M14 4l-4 16" /></svg>
+);
+export const Chart = () => (
+  <svg {...base}><path d="M4 19V5" /><path d="M4 19h16" /><rect x="7" y="11" width="3" height="5" rx="1" /><rect x="12" y="7" width="3" height="9" rx="1" /><rect x="17" y="9" width="3" height="7" rx="1" /></svg>
+);
+export const Bug = () => (
+  <svg {...base}><path d="M8 6a4 4 0 0 1 8 0" /><rect x="6" y="8" width="12" height="11" rx="5" /><path d="M3 13h3M18 13h3M4 19l3-2M20 19l-3-2M4 7l3 2M20 7l-3 2M12 8v11" /></svg>
+);
+export const Briefcase = () => (
+  <svg {...base}><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /><path d="M3 12h18" /><path d="M10 12v2h4v-2" /></svg>
+);

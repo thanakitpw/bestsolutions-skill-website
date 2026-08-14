@@ -146,19 +146,26 @@
 @media (max-width: 640px) { .stat-chip { flex: 1 1 42%; } }
 
 /* ====================== PROBLEM ====================== */
-.pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); max-width: 940px; margin-inline: auto; }
+.pain-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4); margin-inline: auto; }
 .pain {
-  position: relative; display: flex; gap: 14px; align-items: flex-start; overflow: hidden;
+  position: relative; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; overflow: hidden;
+  min-height: 218px;
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
-  padding: var(--space-6); transition: border-color .15s, transform .15s, background .15s;
+  padding: var(--space-5); transition: border-color .18s, transform .18s, background .18s, box-shadow .18s;
 }
 .pain::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--gradient-brand); opacity: 0; transition: opacity .15s; }
-.pain:hover { border-color: var(--border-strong); transform: translateY(-2px); background: var(--surface-2); }
+.pain:hover { border-color: var(--border-strong); transform: translateY(-4px); background: var(--surface-2); box-shadow: var(--shadow-sm); }
 .pain:hover::before { opacity: 1; }
-.pain-ic { flex: none; width: 36px; height: 36px; border-radius: var(--r-md); display: grid; place-items: center; background: var(--brand-soft); border: 1px solid var(--brand-line); }
-.pain-ic svg { width: 18px; height: 18px; stroke: var(--brand-tint); }
-.pain p { font-size: .95rem; color: var(--text-dim); line-height: 1.55; }
-@media (max-width: 760px) { .pain-grid { grid-template-columns: 1fr; } }
+.pain-ic {
+  flex: none; width: 48px; height: 48px; border-radius: var(--r-md); display: grid; place-items: center;
+  background: linear-gradient(135deg, rgba(248,90,32,.16), rgba(248,32,32,.08));
+  border: 1px solid var(--brand-line); color: var(--brand-tint);
+}
+.pain-ic svg { width: 23px; height: 23px; stroke: currentColor; }
+.pain h3 { font-size: 1rem; line-height: 1.35; margin-bottom: 7px; color: var(--text); }
+.pain p { font-size: .9rem; color: var(--text-dim); line-height: 1.6; }
+@media (max-width: 1040px) { .pain-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .pain { min-height: 190px; } }
+@media (max-width: 640px) { .pain-grid { grid-template-columns: 1fr; } .pain { min-height: auto; } }
 
 /* ====================== WORKFLOW ====================== */
 .flow { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; margin-bottom: var(--space-12); }

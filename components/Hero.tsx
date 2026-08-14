@@ -1,5 +1,5 @@
 const bullets = [
-  "เรียนตัวต่อตัว 1:1 รวม 5 ชั่วโมง · เลือกวันเวลาเองได้",
+  "เรียนตัวต่อตัว 1:1 รวม 10 ชั่วโมง · เลือกวันเวลาเองได้",
   "ใช้ AI ช่วยวางไอเดีย ออกแบบ เขียนโค้ด และแก้ Error",
   "ติดตั้ง Tracking พื้นฐาน เช่น GA4, Google Tag และ Search Console",
   "ต่อยอดเป็น Portfolio สมัครงาน รับงาน หรือสร้างรายได้",
@@ -33,8 +33,8 @@ export function Hero() {
           </ul>
           <div className="hero-price">
             <span className="eyebrow">เรียนตัวต่อตัว 1:1</span>
-            <span className="hero-price-now g-text">6,900.-</span>
-            <span className="pill">5 ชั่วโมง</span>
+            <span className="hero-price-now g-text">12,900.-</span>
+            <span className="pill">10 ชั่วโมง</span>
             <span className="pill">เลือกวันเวลาเรียนเองได้</span>
           </div>
           <div className="cta-row">
@@ -71,7 +71,7 @@ export function Hero() {
           <div className="float float-br">
             <b>เรียนตัวต่อตัว 1:1</b>
             <br />
-            <span className="text-dim">5 ชั่วโมง · เลือกเวลาเองได้</span>
+            <span className="text-dim">10 ชั่วโมง · เลือกเวลาเองได้</span>
           </div>
         </div>
       </div>
