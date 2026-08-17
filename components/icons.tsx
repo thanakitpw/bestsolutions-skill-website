@@ -15,6 +15,21 @@ export const XCircle = () => (
 export const Star = () => (
   <svg {...base}><path d="M12 2l2.4 5.2 5.6.6-4.2 3.9 1.2 5.6L12 19.8 6.8 22l1.2-5.6L4 12.4l5.6-.6z" /></svg>
 );
+export const ArrowRight = () => (
+  <svg {...base}><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+);
+export const CheckCircle = () => (
+  <svg {...base}><circle cx="12" cy="12" r="9" /><path d="M8 12l2.5 2.5L16 9" /></svg>
+);
+export const Clock = () => (
+  <svg {...base}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+);
+export const CreditCard = () => (
+  <svg {...base}><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 10h18" /><path d="M7 15h3" /></svg>
+);
+export const ShieldCheck = () => (
+  <svg {...base}><path d="M12 3l7 3v5c0 4.5-2.9 8.6-7 10-4.1-1.4-7-5.5-7-10V6z" /><path d="M9 12l2 2 4-4" /></svg>
+);
 export const Video = () => (
   <svg {...base}><rect x="3" y="6" width="13" height="12" rx="2" /><path d="M16 10l5-3v10l-5-3z" /></svg>
 );
